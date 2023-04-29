@@ -1,5 +1,36 @@
 {
   "sections": {
+    "6bfc0568-f1db-40c3-8ea9-1b84c0772a89": {
+      "type": "section-slider-products",
+      "blocks": {
+        "65ea8e98-ada7-4a1e-9944-8e901b922cd3": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "jeltka-black"
+          }
+        },
+        "d1c52f41-586d-4c0a-b20a-dd8ef2ad801c": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "прямий-блейзер-зі-змішаної-вовняної-тканини-limited-edition"
+          }
+        },
+        "b10f30e6-d125-4264-9baa-c18392dabeae": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "смугаста-сорочка-оверсайз"
+          }
+        }
+      },
+      "block_order": [
+        "65ea8e98-ada7-4a1e-9944-8e901b922cd3",
+        "d1c52f41-586d-4c0a-b20a-dd8ef2ad801c",
+        "b10f30e6-d125-4264-9baa-c18392dabeae"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -68,6 +99,7 @@
     }
   },
   "order": [
+    "6bfc0568-f1db-40c3-8ea9-1b84c0772a89",
     "image_banner",
     "featured_collection"
   ]
