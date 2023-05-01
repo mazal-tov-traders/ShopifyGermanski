@@ -20,12 +20,27 @@
           "settings": {
             "proposal_product": "смугаста-сорочка-оверсайз"
           }
+        },
+        "0f347fd5-8a6a-4015-beab-1c32ab84eb44": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "proposal_product": "атласна-сорочка-з-опущеними-проймами"
+          }
+        },
+        "da6fbabc-324d-4351-9564-c1c204f48e1b": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "тюлева-сукня-з-принтом"
+          }
         }
       },
       "block_order": [
         "65ea8e98-ada7-4a1e-9944-8e901b922cd3",
         "d1c52f41-586d-4c0a-b20a-dd8ef2ad801c",
-        "b10f30e6-d125-4264-9baa-c18392dabeae"
+        "b10f30e6-d125-4264-9baa-c18392dabeae",
+        "0f347fd5-8a6a-4015-beab-1c32ab84eb44",
+        "da6fbabc-324d-4351-9564-c1c204f48e1b"
       ],
       "settings": {
         "include_margins": true
