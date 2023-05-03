@@ -43,7 +43,59 @@
         "da6fbabc-324d-4351-9564-c1c204f48e1b"
       ],
       "settings": {
-        "include_margins": true
+        "slider_items": 3
+      }
+    },
+    "c258c921-89ac-4536-a694-6c2b732be0f4": {
+      "type": "section-slider-products",
+      "blocks": {
+        "a61caaeb-beb5-43e6-9382-5510d33e3830": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "jeltka-black"
+          }
+        },
+        "ff94846e-cdad-4a13-8da1-98f03fa9de9c": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "атласна-сорочка-з-опущеними-проймами-1"
+          }
+        },
+        "afe4165a-1b9d-4ae9-8b11-ca5c93f8e91c": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "атласна-сорочка-з-опущеними-проймами"
+          }
+        },
+        "abce4e23-05c8-422d-995c-6a9b566023c4": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "поплінова-сорочка"
+          }
+        },
+        "18c0deeb-8f5c-4a48-8353-045bdee3f1c7": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "смугаста-сорочка-оверсайз"
+          }
+        },
+        "2f08717f-af10-43ad-93d5-add0f6cc731b": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "черная-крутка"
+          }
+        }
+      },
+      "block_order": [
+        "a61caaeb-beb5-43e6-9382-5510d33e3830",
+        "ff94846e-cdad-4a13-8da1-98f03fa9de9c",
+        "afe4165a-1b9d-4ae9-8b11-ca5c93f8e91c",
+        "abce4e23-05c8-422d-995c-6a9b566023c4",
+        "18c0deeb-8f5c-4a48-8353-045bdee3f1c7",
+        "2f08717f-af10-43ad-93d5-add0f6cc731b"
+      ],
+      "settings": {
+        "slider_items": 2
       }
     },
     "image_banner": {
@@ -115,6 +167,7 @@
   },
   "order": [
     "6bfc0568-f1db-40c3-8ea9-1b84c0772a89",
+    "c258c921-89ac-4536-a694-6c2b732be0f4",
     "image_banner",
     "featured_collection"
   ]
