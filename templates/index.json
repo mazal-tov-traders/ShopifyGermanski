@@ -46,56 +46,42 @@
         "slider_items": 3
       }
     },
-    "c258c921-89ac-4536-a694-6c2b732be0f4": {
+    "02113de2-b2d3-4c75-bc6b-7db5bf89aad8": {
       "type": "section-slider-products",
       "blocks": {
-        "a61caaeb-beb5-43e6-9382-5510d33e3830": {
+        "fe190bf4-9f83-4273-97cd-0f87de3537cd": {
           "type": "product",
           "settings": {
-            "proposal_product": "jeltka-black"
+            "proposal_product": "дутая-куртка"
           }
         },
-        "ff94846e-cdad-4a13-8da1-98f03fa9de9c": {
+        "b9f42efc-97db-4503-b508-3d5732a4fb86": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "черная-крутка"
+          }
+        },
+        "875f6b08-4bf6-4713-9062-bf7cec916d6c": {
           "type": "product",
           "settings": {
             "proposal_product": "атласна-сорочка-з-опущеними-проймами-1"
           }
         },
-        "afe4165a-1b9d-4ae9-8b11-ca5c93f8e91c": {
+        "8012ec37-9bfd-4eea-8147-16c967fe4ffb": {
           "type": "product",
           "settings": {
-            "proposal_product": "атласна-сорочка-з-опущеними-проймами"
-          }
-        },
-        "abce4e23-05c8-422d-995c-6a9b566023c4": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "поплінова-сорочка"
-          }
-        },
-        "18c0deeb-8f5c-4a48-8353-045bdee3f1c7": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "смугаста-сорочка-оверсайз"
-          }
-        },
-        "2f08717f-af10-43ad-93d5-add0f6cc731b": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "черная-крутка"
+            "proposal_product": "jeltka-black"
           }
         }
       },
       "block_order": [
-        "a61caaeb-beb5-43e6-9382-5510d33e3830",
-        "ff94846e-cdad-4a13-8da1-98f03fa9de9c",
-        "afe4165a-1b9d-4ae9-8b11-ca5c93f8e91c",
-        "abce4e23-05c8-422d-995c-6a9b566023c4",
-        "18c0deeb-8f5c-4a48-8353-045bdee3f1c7",
-        "2f08717f-af10-43ad-93d5-add0f6cc731b"
+        "fe190bf4-9f83-4273-97cd-0f87de3537cd",
+        "b9f42efc-97db-4503-b508-3d5732a4fb86",
+        "875f6b08-4bf6-4713-9062-bf7cec916d6c",
+        "8012ec37-9bfd-4eea-8147-16c967fe4ffb"
       ],
       "settings": {
-        "slider_items": 2
+        "slider_items": 4
       }
     },
     "image_banner": {
@@ -167,7 +153,7 @@
   },
   "order": [
     "6bfc0568-f1db-40c3-8ea9-1b84c0772a89",
-    "c258c921-89ac-4536-a694-6c2b732be0f4",
+    "02113de2-b2d3-4c75-bc6b-7db5bf89aad8",
     "image_banner",
     "featured_collection"
   ]

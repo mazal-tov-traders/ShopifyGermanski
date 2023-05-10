@@ -12,8 +12,8 @@
             {% if block.settings.proposal_product != blank %}
               {% assign product = block.settings.proposal_product %}
               <div class="slider-product-proposal__slider-item">
+                <a href="{{ product.url}}" class="slider-item__link"></a>
                 <div class="slider-item__image">
-                  <a href="{{ product.url}}" class="slider-item__link"></a>
                   <img
                     src="{{ product.featured_image | img_url: '250x' }}"
                     alt="{{ product.featured_image.alt | default: product.title }}"
@@ -49,7 +49,25 @@
     $('#shopify-section-{{section.id}} .slider-product-proposal__slider-list').slick({
       infinite: true,
       slidesToShow: {{ section.settings.slider_items }},
-      slidesToScroll: 2
+      slidesToScroll: 2,
+      speed: 1000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: {{ section.settings.slider_items_tab }},
+            slidesToScroll: {{ section.settings.slider_items_tab }}
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+
+      ]
       });
   });
 </script>
@@ -66,19 +84,28 @@
       "min": 1,
       "max": 5,
       "step": 1,
-      "label": "Item per page",
-      "default": 4
+      "label": "Items per page",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "slider_items_tab",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Items per page",
+      "default": 2
     }
   ],
   "blocks": [
     {
       "type": "product",
-      "name": "proposal product",
+      "name": "Proposal product",
       "settings": [
         {
           "type": "product",
           "id": "proposal_product",
-          "label": "Our proposal product"
+          "label": "Our proposal Product"
         }
       ]
     }
