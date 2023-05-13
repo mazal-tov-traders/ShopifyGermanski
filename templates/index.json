@@ -1,5 +1,10 @@
 {
   "sections": {
+    "6e849484-0b74-4ad0-8528-63a1b73cc616": {
+      "type": "image-get-links",
+      "settings": {
+      }
+    },
     "6bfc0568-f1db-40c3-8ea9-1b84c0772a89": {
       "type": "section-slider-products",
       "blocks": {
@@ -44,45 +49,6 @@
       ],
       "settings": {
         "slider_items": 3,
-        "slider_items_tab": 2
-      }
-    },
-    "02113de2-b2d3-4c75-bc6b-7db5bf89aad8": {
-      "type": "section-slider-products",
-      "blocks": {
-        "fe190bf4-9f83-4273-97cd-0f87de3537cd": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "дутая-куртка"
-          }
-        },
-        "b9f42efc-97db-4503-b508-3d5732a4fb86": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "черная-крутка"
-          }
-        },
-        "875f6b08-4bf6-4713-9062-bf7cec916d6c": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "атласна-сорочка-з-опущеними-проймами-1"
-          }
-        },
-        "8012ec37-9bfd-4eea-8147-16c967fe4ffb": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "jeltka-black"
-          }
-        }
-      },
-      "block_order": [
-        "fe190bf4-9f83-4273-97cd-0f87de3537cd",
-        "b9f42efc-97db-4503-b508-3d5732a4fb86",
-        "875f6b08-4bf6-4713-9062-bf7cec916d6c",
-        "8012ec37-9bfd-4eea-8147-16c967fe4ffb"
-      ],
-      "settings": {
-        "slider_items": 2,
         "slider_items_tab": 2
       }
     },
@@ -154,8 +120,8 @@
     }
   },
   "order": [
+    "6e849484-0b74-4ad0-8528-63a1b73cc616",
     "6bfc0568-f1db-40c3-8ea9-1b84c0772a89",
-    "02113de2-b2d3-4c75-bc6b-7db5bf89aad8",
     "image_banner",
     "featured_collection"
   ]
