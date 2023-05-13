@@ -43,7 +43,8 @@
         "da6fbabc-324d-4351-9564-c1c204f48e1b"
       ],
       "settings": {
-        "slider_items": 3
+        "slider_items": 3,
+        "slider_items_tab": 2
       }
     },
     "02113de2-b2d3-4c75-bc6b-7db5bf89aad8": {
@@ -81,7 +82,8 @@
         "8012ec37-9bfd-4eea-8147-16c967fe4ffb"
       ],
       "settings": {
-        "slider_items": 4
+        "slider_items": 2,
+        "slider_items_tab": 2
       }
     },
     "image_banner": {

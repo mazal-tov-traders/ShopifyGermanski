@@ -1,8 +1,8 @@
-/*  Slick slider start */
+
 .slick-slider{
 
 }
-.slick-slider .slick-arrow{
+.slick-slider .slick-arrow, .arrow-control{
 	position: absolute;
 	display: block;
 	top: 50%;
@@ -22,10 +22,10 @@
 	transition: 0.3s linear opacity;
 	opacity: 1;
 }
-.slick-slider .slick-arrow:hover{
+.slick-slider .slick-arrow, .arrow-control:hover{
 	opacity: 0.8;
 }
-.slick-slider .slick-arrow::before{
+.slick-slider .slick-arrow::before, .arrow-control::before{
 	position: absolute;
 	font-size: 18px;
 	line-height: inherit;
@@ -36,19 +36,19 @@
 	font-weight: bold;
 	font-size: 24px;
 }
-.slick-slider .slick-prev{
+.slick-slider .slick-prev, .arrow-control{
 	left: -25px;
 }
-.slick-slider .slick-prev::before{
+.slick-slider .slick-prev::before, .arrow-control::before{
 	content: '<';
 }
-.slick-slider .slick-next{
+.slick-slider .slick-next, .arrow-control{
 right: -25px;
 }
-.slick-slider .slick-next::before{
+.slick-slider .slick-next::before, .arrow-control::before{
 	content: ">";
 }
-/* Slick slider End */
+
 
 .slider-product-proposal{
 	padding: 50px 0;
