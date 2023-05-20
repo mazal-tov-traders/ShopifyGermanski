@@ -32,11 +32,13 @@ QQQQ
   <h2>
     {{ collection.title }}
   </h2>
-  Product count collection.all_products_count = ({{ collection.all_products_count }})
-  Product count collection.products.size = ({{ collection.products.size }})
-  {% for item in collection %}
-
-  {% endfor %}
+  Product count collection.all_products_count = ({{ collection.all_products_count }}) Product count
+  collection.products.size = ({{ collection.products.size }})
+  <div style="border: 1px solid red; padding: 5px;">
+    {% for product in collection.products %}
+      <div style="border: 1px solid red; padding: 5px;"></div>
+    {% endfor %}
+  </div>
 {% endif %}
 
 {% schema %}
