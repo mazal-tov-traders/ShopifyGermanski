@@ -1,11 +1,56 @@
+<div style="border: 1px solid orang; padding: 50px">
+  {% comment %} {{ product | json}} {% endcomment %}
+  <div>product.title - string - {{ product.title }}</div>
+  <div>product.id - number - {{ product.id }}</div>
+  <div>product.tags - array - {{ product.tags | join: ',' }}</div>
+  <div>product.available - boolean - {{ product.available }}</div>
+  <div>product.featured_image - object - {{ product.featured_image }}</div>
+  <div>product.variants | json - array with objects - {{ product.variants | json }}</div>
+  <div>product.variants.size | json - array size - {{ product.variants.size }}</div>
+  <div>
+    product.variants[0].title == id - array size - ({{ product.variants[0].title }} == {{ product.variants[0].id }})
+  </div>
+  {% if product.variants.size > 0 %}
+    <ul>
+      {% for variant in product.variants %}
+        <li>
+          {{ variant.title }} == {{ variant.id }}
+          Variant optons
+          <ol>
+            {% for option in variant.options %}
+              <li>{{ option }}</li>
+            {% endfor %}
+          </ol>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
+QQQQ
+{% if section.settings.collection != blank %}
+  {% assign collection = section.settings.collection %}
+  <h2>
+    {{ collection.title }}
+  </h2>
+  Product count collection.all_products_count = ({{ collection.all_products_count }})
+  Product count collection.products.size = ({{ collection.products.size }})
+  {% for item in collection %}
 
+  {% endfor %}
+{% endif %}
 
 {% schema %}
 {
   "name": "Product object",
   "tag": "section",
-  "class": "section",
-  "settings": [],
+  "class": "section product-object-section",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "collection"
+    }
+  ],
 
   "presets": [
     {
