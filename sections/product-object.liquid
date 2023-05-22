@@ -1,10 +1,11 @@
-<div style="border: 1px solid orang; padding: 50px">
-  {% comment %} {{ product | json}} {% endcomment %}
+<div style="border: 1px solid orange; padding: 50px;">
+  {% comment %} {{ product | json }} {% endcomment %}
   <div>product.title - string - {{ product.title }}</div>
   <div>product.id - number - {{ product.id }}</div>
-  <div>product.tags - array - {{ product.tags | join: ',' }}</div>
+  <div>product.tags - array - [{{ product.tags | join: ', ' }}]</div>
   <div>product.available - boolean - {{ product.available }}</div>
   <div>product.featured_image - object - {{ product.featured_image }}</div>
+  <div>product.featured_image.id - object - {{ product.featured_image.id }}</div>
   <div>product.variants | json - array with objects - {{ product.variants | json }}</div>
   <div>product.variants.size | json - array size - {{ product.variants.size }}</div>
   <div>
@@ -15,7 +16,7 @@
       {% for variant in product.variants %}
         <li>
           {{ variant.title }} == {{ variant.id }}
-          Variant optons
+          Variant options
           <ol>
             {% for option in variant.options %}
               <li>{{ option }}</li>
@@ -26,21 +27,34 @@
     </ul>
   {% endif %}
 </div>
-QQQQ
+ewqew
 {% if section.settings.collection != blank %}
   {% assign collection = section.settings.collection %}
-  <h2>
-    {{ collection.title }}
-  </h2>
-  Product count collection.all_products_count = ({{ collection.all_products_count }}) Product count
-  collection.products.size = ({{ collection.products.size }})
-  <div style="border: 1px solid red; padding: 5px;">
+  <h2>Collection object ={{ collection.title }}</h2>
+  <div style="border: 1px solid green; padding: 2px;">
     {% for product in collection.products %}
-      <div style="border: 1px solid red; padding: 5px;"></div>
+      <div style="border: 1px solid red; padding: 2px;">
+        <h3>Product object = {{ product.title }}</h3>
+        {% if product.variants.size > 0 %}
+          <div style="border: 1px solid orange; padding: 2px;">
+            {% for variant in product.variants %}
+              <div style="border: 1px solid rgb(212, 89, 186); padding: 2px;">
+                <h4>Variant object = {{ variant.title }}</h4>
+                <ul>
+                  {% for option in variant.options %}
+                    <li style="border: 1px solid blue; padding: 2px;">Option object {{ option }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div style="border: 1px solid purple; padding: 2px;">NONE</div>
+        {% endif %}
+      </div>
     {% endfor %}
   </div>
 {% endif %}
-
 {% schema %}
 {
   "name": "Product object",
@@ -50,10 +64,9 @@ QQQQ
     {
       "type": "collection",
       "id": "collection",
-      "label": "collection"
+      "label": "Collection"
     }
   ],
-
   "presets": [
     {
       "name": "Product object"
