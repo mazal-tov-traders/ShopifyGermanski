@@ -1,72 +1,19 @@
 {
   "sections": {
-    "6e849484-0b74-4ad0-8528-63a1b73cc616": {
-      "type": "image-get-links",
-      "settings": {
-        "get_image_v_1": "shopify:\/\/shop_images\/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg"
-      }
-    },
-    "6bfc0568-f1db-40c3-8ea9-1b84c0772a89": {
-      "type": "section-slider-products",
-      "blocks": {
-        "65ea8e98-ada7-4a1e-9944-8e901b922cd3": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "jeltka-black"
-          }
-        },
-        "d1c52f41-586d-4c0a-b20a-dd8ef2ad801c": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "прямий-блейзер-зі-змішаної-вовняної-тканини-limited-edition"
-          }
-        },
-        "b10f30e6-d125-4264-9baa-c18392dabeae": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "смугаста-сорочка-оверсайз"
-          }
-        },
-        "0f347fd5-8a6a-4015-beab-1c32ab84eb44": {
-          "type": "product",
-          "disabled": true,
-          "settings": {
-            "proposal_product": "атласна-сорочка-з-опущеними-проймами"
-          }
-        },
-        "da6fbabc-324d-4351-9564-c1c204f48e1b": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "тюлева-сукня-з-принтом"
-          }
-        }
-      },
-      "block_order": [
-        "65ea8e98-ada7-4a1e-9944-8e901b922cd3",
-        "d1c52f41-586d-4c0a-b20a-dd8ef2ad801c",
-        "b10f30e6-d125-4264-9baa-c18392dabeae",
-        "0f347fd5-8a6a-4015-beab-1c32ab84eb44",
-        "da6fbabc-324d-4351-9564-c1c204f48e1b"
-      ],
-      "settings": {
-        "slider_items": 3,
-        "slider_items_tab": 2
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "Crunch into a friendly and gluten free snack made with simple organic ingredients",
             "heading_size": "h0"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "SHOP CRUNCHY ROLLERS",
             "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
@@ -80,34 +27,79 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
+        "image": "shopify:\/\/shop_images\/Banner1.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-left",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
+        "desktop_content_alignment": "left",
+        "color_scheme": "accent-2",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
     },
+    "eebe7564-949b-4a15-a894-fe60af4f7b92": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19104638697752__eebe7564-949b-4a15-a894-fe60af4f7b92-16848816325efe713e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Best Sellers",
+            "heading_size": "h1"
+          }
+        },
+        "template--19104638697752__eebe7564-949b-4a15-a894-fe60af4f7b92-16848816325efe713e-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--19104638697752__eebe7564-949b-4a15-a894-fe60af4f7b92-16848816325efe713e-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19104638697752__eebe7564-949b-4a15-a894-fe60af4f7b92-16848816325efe713e-0",
+        "template--19104638697752__eebe7564-949b-4a15-a894-fe60af4f7b92-16848816325efe713e-1",
+        "template--19104638697752__eebe7564-949b-4a15-a894-fe60af4f7b92-16848816325efe713e-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
+        "title": "<em><strong>Best Sellers<\/strong><\/em>",
+        "heading_size": "h0",
         "description": "",
         "show_description": false,
         "description_style": "body",
         "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
+        "products_to_show": 3,
+        "columns_desktop": 3,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "background-1",
+        "color_scheme": "accent-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
@@ -115,15 +107,77 @@
         "enable_quick_add": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 44,
+        "padding_top": 0,
         "padding_bottom": 36
+      }
+    },
+    "0360700d-572d-449a-9201-d4ce65ed613a": {
+      "type": "featured-product",
+      "blocks": {
+        "template--19104638697752__0360700d-572d-449a-9201-d4ce65ed613a-1684883202517c837d-0": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "template--19104638697752__0360700d-572d-449a-9201-d4ce65ed613a-1684883202517c837d-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "template--19104638697752__0360700d-572d-449a-9201-d4ce65ed613a-1684883202517c837d-2": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--19104638697752__0360700d-572d-449a-9201-d4ce65ed613a-1684883202517c837d-3": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "template--19104638697752__0360700d-572d-449a-9201-d4ce65ed613a-1684883202517c837d-4": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "template--19104638697752__0360700d-572d-449a-9201-d4ce65ed613a-1684883202517c837d-5": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        }
+      },
+      "block_order": [
+        "template--19104638697752__0360700d-572d-449a-9201-d4ce65ed613a-1684883202517c837d-0",
+        "template--19104638697752__0360700d-572d-449a-9201-d4ce65ed613a-1684883202517c837d-1",
+        "template--19104638697752__0360700d-572d-449a-9201-d4ce65ed613a-1684883202517c837d-2",
+        "template--19104638697752__0360700d-572d-449a-9201-d4ce65ed613a-1684883202517c837d-3",
+        "template--19104638697752__0360700d-572d-449a-9201-d4ce65ed613a-1684883202517c837d-4",
+        "template--19104638697752__0360700d-572d-449a-9201-d4ce65ed613a-1684883202517c837d-5"
+      ],
+      "settings": {
+        "product": "apple-cinnamon",
+        "color_scheme": "background-1",
+        "secondary_background": true,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "6e849484-0b74-4ad0-8528-63a1b73cc616",
-    "6bfc0568-f1db-40c3-8ea9-1b84c0772a89",
     "image_banner",
-    "featured_collection"
+    "eebe7564-949b-4a15-a894-fe60af4f7b92",
+    "featured_collection",
+    "0360700d-572d-449a-9201-d4ce65ed613a"
   ]
 }

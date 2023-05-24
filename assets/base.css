@@ -2,11 +2,13 @@
 
 :root,
 .color-background-1 {
-  --color-foreground: var(--color-base-text);
+  
   --color-background: var(--color-base-background-1);
   --gradient-background: var(--gradient-base-background-1);
 }
-
+.color-background-transparent{
+  background-color: transparent !important;
+}
 .color-background-2 {
   --color-foreground: var(--color-base-text);
   --color-background: var(--color-base-background-2);
@@ -2306,10 +2308,20 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header {
   display: grid;
   grid-template-areas: 'left-icons heading icons';
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr ;
   align-items: center;
+  
 }
-
+#shopify-section-template--19104638697752__image_banner{
+  margin: 0 auto;
+  max-width: 1920px;
+}
+#Banner-template--19104638697752__image_banner{
+  background-color: #fff !important;
+}
+.collection.section-template--19104638697752__featured_collection-padding{
+  background-color: #fff;
+}
 @media screen and (max-width: 749px) {
   .header--has-app {
     grid-template-columns: auto 1fr auto;
@@ -2339,7 +2351,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: 1fr auto 1fr;
     column-gap: 2rem;
   }
 
@@ -2461,7 +2473,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header__icons {
   display: flex;
   grid-area: icons;
-  justify-self: end;
+  
 }
 
 .header__icons .shopify-app-block {
@@ -2690,6 +2702,7 @@ details[open] > .header__submenu {
   animation: animateMenuOpen var(--duration-default) ease;
   animation-fill-mode: forwards;
   z-index: 1;
+  background-color: #275D38;
 }
 
 @media (prefers-reduced-motion) {
@@ -2784,10 +2797,11 @@ details[open] > .header__menu-item .icon-caret {
 .header__submenu.global-settings-popup {
   border-radius: var(--popup-corner-radius);
   border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
-  border-style: solid;
+  
   border-width: var(--popup-border-width);
   box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity));
   z-index: -1;
+    padding: 8px;
 }
 
 .header__submenu.list-menu {

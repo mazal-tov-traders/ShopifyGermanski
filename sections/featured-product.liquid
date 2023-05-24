@@ -414,6 +414,11 @@
     {% render 'product-media-modal', product: product, variant_images: media_to_render %}
   </div>
 </section>
+<style>
+ .background-secondary .featured-product {
+   display: block;
+ }
+</style>
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {%- if section.settings.image_zoom == 'hover' -%}

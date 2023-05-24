@@ -1,10 +1,5 @@
 {
   "sections": {
-    "94719c8e-0cde-4bd7-bbb0-61ec2077d0c1": {
-      "type": "product-object",
-      "settings": {
-      }
-    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -82,7 +77,6 @@
     },
     "related-products": {
       "type": "related-products",
-      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -100,7 +94,6 @@
     }
   },
   "order": [
-    "94719c8e-0cde-4bd7-bbb0-61ec2077d0c1",
     "main",
     "related-products"
   ]
