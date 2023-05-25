@@ -1,5 +1,6 @@
 .cart-notification-wrapper {
   position: relative;
+ 
 }
 
 .cart-notification-wrapper .cart-notification {
@@ -58,7 +59,7 @@
 .cart-notification.active {
   transform: translateY(0);
   transition: transform var(--duration-default) ease, visibility 0s;
-  visibility: visible;
+  
 }
 
 .cart-notification__header {
@@ -119,3 +120,7 @@
   margin-bottom: 0.5rem;
   margin-top: 0;
 }
+
+
+
+ 

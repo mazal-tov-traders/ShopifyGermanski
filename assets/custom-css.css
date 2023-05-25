@@ -1,0 +1,51 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
+
+
+
+.caption-with-letter-spacing.light{
+  color: #275D38;
+}
+.box__price-and-button{
+  display: flex;
+  justify-content: space-between;
+ padding-top: 15px;
+  align-items: center;
+    text-align: center;
+}
+
+
+.price__regular .price-item--regular {
+    font-size: 32px;
+  
+  color: #275D38 !important;
+    z-index: 5;
+}
+
+
+
+
+
+.quick-add .quick-add__submit.button {
+  background-color:  #275D38;
+  color: white;
+  max-width: 158px;
+  width:100%;
+
+  height: 40px;
+
+
+border-radius: 4px;
+
+
+}
+
+.card__heading .full-unstyled-link{
+  color: #275D38;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: 700;
+
+
+}

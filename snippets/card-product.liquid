@@ -20,6 +20,7 @@
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 
+
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
@@ -128,6 +129,8 @@
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                 class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+                style="color: red;"
+                
               >
                 {{- 'products.product.on_sale' | t -}}
               </span>
@@ -137,6 +140,10 @@
       </div>
       <div class="card__content">
         <div class="card__information">
+  {%- if show_vendor -%}
+              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+              <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
+            {%- endif -%}
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
@@ -153,10 +160,7 @@
             </a>
           </h3>
           <div class="card-information">
-            {%- if show_vendor -%}
-              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-              <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
-            {%- endif -%}
+            
 
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
@@ -196,10 +200,11 @@
               </p>
             {%- endif -%}
 
-            {% render 'price', product: card_product, price_class: '' %}
-          </div>
-        </div>
-        {%- if show_quick_add -%}
+
+  <div class="box__price-and-button" >
+  <div product-id="{{ card_product.id }}" product-handle="{{ card_product.handle }}" class="alireviews-review-star-rating"></div>
+  {% render 'price', product: card_product, price_class: '' %}
+  {%- if show_quick_add -%}
           <div class="quick-add no-js-hidden">
             {%- liquid
               assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
@@ -313,6 +318,14 @@
             {%- endif -%}
           </div>
         {%- endif -%}
+  
+  </div>
+  <div style=" line-height: 0px; color:#275D38;">32 Rollers</div>
+
+            
+          </div>
+        </div>
+        
         <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}
             <span
