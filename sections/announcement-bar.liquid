@@ -8,7 +8,27 @@
           {%- endif -%}
               <div class="page-width">
                 <p class="announcement-bar__message {{ block.settings.text_alignment }} h5">
-                  <span>{{ block.settings.text | escape }}</span>
+                  
+                  <div class='announcement-bar__wrapper'>
+                    <h6 class="elementor-heading-title elementor-size-default">
+                      <a href="mailto:info@dermaflage.com">info@dermaflage.com</a>
+                    </h6>
+                    
+                
+                    <span>{{ block.settings.text | escape }}</span>
+
+                    <a href="https://dermaflage.com/my-account/" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						  <span class="elementor-button-icon elementor-align-icon-right">
+				              	
+                          </span>
+                          <span class="elementor-button-text">Log In</span>
+		               </span>
+				    </a>
+                     						  
+                    
+                  </div>
+                  
                   {%- if block.settings.link != blank -%}
                     {% render 'icon-arrow' %}
                   {%- endif -%}

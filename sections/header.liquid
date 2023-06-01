@@ -3,9 +3,6 @@
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
 {%- if settings.predictive_search_enabled -%}
   <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -25,8 +22,20 @@
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
   {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+
+  <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
+<!--  asasasas-->
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+<!--   asasasa -->
+
+  
 <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
@@ -38,18 +47,8 @@
     justify-self: start;
     margin-left: -1.2rem;
   }
-  .list-menu .header__menu-item span{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  }
-  .header .header__icons a{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  
-  }
- 
+
+
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
     .scrolled-past-header .header__heading-logo-wrapper {
       width: 75%;
@@ -102,10 +101,6 @@
       padding-top: 0.5rem;
     }
   }
-
-  header li{
-  color: white;
-  }
 </style>
 
 {%- style -%}
@@ -144,19 +139,9 @@
   <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
-
-
-
-
-
-
-
-
-
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
   <symbol id="icon-search" viewbox="0 0 18 19" fill="none">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.41913 14.8246C3.33197 14.8246 0.00683594 11.4995 0.00683594 7.41229C0.00683594 3.32513 3.33197 0 7.41913 0C11.5063 0 14.8314 3.32513 14.8314 7.41229C14.8314 11.4995 11.5063 14.8246 7.41913 14.8246ZM7.41913 1.40517C4.10678 1.40517 1.41201 4.09995 1.41201 7.41229C1.41201 10.7246 4.10678 13.4194 7.41913 13.4194C10.7315 13.4194 13.4263 10.7246 13.4263 7.41229C13.4263 4.09995 10.7315 1.40517 7.41913 1.40517ZM17.7873 17.7942C18.0617 17.5198 18.0617 17.0749 17.7873 16.8006L14.6432 13.6565C14.3688 13.3821 13.924 13.3821 13.6496 13.6565C13.3752 13.9309 13.3752 14.3758 13.6496 14.6501L16.7937 17.7942C16.9309 17.9314 17.1107 18 17.2905 18C17.4703 18 17.6501 17.9314 17.7873 17.7942Z" fill="white"/>
-    
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" fill="currentColor"/>
   </symbol>
 
   <symbol id="icon-reset" class="icon icon-close"  fill="none" viewBox="0 0 18 18" stroke="currentColor">
@@ -165,14 +150,10 @@
     <path d="M1.22896 6.88502L6.77288 1.11523" stroke-linecap="round" stroke-linejoin="round" transform="translate(5 5)"/>
   </symbol>
 
-  <symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17" >
+  <symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
     <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
   </symbol>
 </svg>
-
-
-
-      
 
 {%- liquid
   for block in section.blocks
@@ -183,7 +164,7 @@
 -%}
 
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
-  <header id="header-modify" class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}">
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}">
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
         <details id="Details-menu-drawer-container" class="menu-drawer-container">
@@ -196,12 +177,15 @@
           <div id="menu-drawer" class="gradient menu-drawer motion-reduce" tabindex="-1">
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
+               
                 <nav class="menu-drawer__navigation">
+                  
                   <ul class="menu-drawer__menu has-submenu list-menu" role="list">
+                    
                     {%- for link in section.settings.menu.links -%}
                       <li>
                         {%- if link.links != blank -%}
-                          <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
+                        <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
                             <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
                               {{ link.title | escape }}
                               {% render 'icon-arrow' %}
@@ -465,9 +449,7 @@
 
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
-
-
-  
+        <h1 class="header__heading">
       {%- endif -%}
           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
             {%- if settings.logo != blank -%}
@@ -487,7 +469,7 @@
                 }}
               </div>
             {%- else -%}
-              <span class="h2">{{  }}</span>
+              <span class="h2">{{ shop.name }}</span>
             {%- endif -%}
           </a>
       {%- if request.page_type == 'index' -%}
@@ -498,6 +480,7 @@
     {%- if section.settings.menu != blank -%}
       {%- if section.settings.menu_type_desktop == 'dropdown' -%}
         <nav class="header__inline-menu">
+          
           <ul class="list-menu list-menu--inline" role="list">
             {%- for link in section.settings.menu.links -%}
               <li>
@@ -508,6 +491,7 @@
                         <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                         {% render 'icon-caret' %}
                       </summary>
+                      
                       <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup" role="list" tabindex="-1">
                         {%- for childlink in link.links -%}
                           <li>
@@ -548,10 +532,12 @@
         </nav>
       {%- elsif section.settings.menu_type_desktop != 'drawer' -%}
         <nav class="header__inline-menu">
+          
           <ul class="list-menu list-menu--inline" role="list">
             {%- for link in section.settings.menu.links -%}
               <li>
                 {%- if link.links != blank -%}
+                  
                   <header-menu>
                     <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
                       <summary class="header__menu-item list-menu__item link focus-inset">
@@ -560,7 +546,8 @@
                       </summary>
                       <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content gradient motion-reduce global-settings-popup" tabindex="-1">
                         <ul class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
-                          {%- for childlink in link.links -%}
+                          {% if link.title != "OFFERS"%}
+                            {%- for childlink in link.links -%}
                             <li>
                               <a href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                                 {{ childlink.title | escape }}
@@ -578,6 +565,29 @@
                               {%- endif -%}
                             </li>
                           {%- endfor -%}
+                            {% else %}
+<!--START  вывод блока-->
+1233
+                          {% for block in section.blocks %}  
+                               {% case block.type %}
+  
+                               {% when 'product' %}
+                                 <h2 class="product__title {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+                                {%- if product.title != blank -%}
+                                {{ product.title | escape }}
+                                {%- else -%}
+                                {{ 'onboarding.product_title' | t }}
+                                {%- endif -%}
+                                </h2>
+                          
+                              {% when 'product' %}
+                 
+                          
+                              {% endcase %}
+                              {% endfor %}
+<!--END вывод блока-->
+                            {% endif %}
+                          
                         </ul>
                       </div>
                     </details>
@@ -770,14 +780,8 @@
           </div>
         {%- endif -%}
       </a>
-        {% if section.settings.tell-link != blank %}
-        <a href="tel:{{ section.settings.tell-link }}" class="tell-namb" style="padding-left: 25px; color: white; text-decoration: none;">{{ section.settings.tell }}</a>
-          {% endif %}
     </div>
   </header>
-                            <style>
-                              @media (max-width: 1079px) { .tell-namb{display:none;} }
-                            </style> 
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
 {%- if settings.cart_type == "notification" -%}
@@ -935,13 +939,6 @@
     }
   </script>
 {%- endif -%}
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-    let clientHeight = document.getElementById('header-modify').clientHeight;
-    let elementMainDiv = document.getElementById('MainContent');
-    elementMainDiv.style.marginTop = `-${clientHeight}px`;
-  });
-</script>
 
 {% schema %}
 {
@@ -973,16 +970,6 @@ document.addEventListener('DOMContentLoaded', function(){
       "default": "middle-left",
       "label": "t:sections.header.settings.logo_position.label",
       "info": "t:sections.header.settings.logo_help.content"
-    },
-     {
-      "type": "text",
-      "id": "tell",
-      "label": "Tell namber"
-    },
-    {
-      "type": "text",
-      "id": "tell-link",
-      "label": "Tell namber link"
     },
     {
       "type": "link_list",
@@ -1041,7 +1028,6 @@ document.addEventListener('DOMContentLoaded', function(){
       "default": true,
       "label": "t:sections.header.settings.show_line_separator.label"
     },
-    
     {
       "type": "select",
       "id": "color_scheme",
@@ -1057,10 +1043,6 @@ document.addEventListener('DOMContentLoaded', function(){
         {
           "value": "background-1",
           "label": "t:sections.all.colors.background_1.label"
-        },
-        {
-          "value": "background-transparent",
-          "label": "Transparent BG"
         },
         {
           "value": "background-2",
@@ -1158,7 +1140,18 @@ document.addEventListener('DOMContentLoaded', function(){
   "blocks": [
     {
       "type": "@app"
-    }
+    },
+    {
+       "name": "product",
+       "type": "product",
+       "settings": [
+         {
+          "type": "product",
+          "id": "product",
+      "label": "Product"
+         }
+       ]
+     }
   ]
 }
 {% endschema %}
