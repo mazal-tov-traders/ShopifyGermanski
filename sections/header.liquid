@@ -27,12 +27,52 @@
 {%- endif -%}
 
 <!--  asasasas-->
-{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
-{{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
-{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+
+
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
-{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{%- if section.settings.enable_quick_add -%}
+  {{ 'quick-add.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign products_to_display = section.settings.collection.all_products_count
+
+  if section.settings.collection.all_products_count > section.settings.products_to_show
+    assign products_to_display = section.settings.products_to_show
+    assign more_in_collection = true
+  endif
+
+  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+  assign show_mobile_slider = false
+  if section.settings.swipe_on_mobile and products_to_display > columns_mobile_int
+    assign show_mobile_slider = true
+  endif
+
+  assign show_desktop_slider = false
+  if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
+    assign show_desktop_slider = true
+  endif
+-%}
 <!--   asasasa -->
 
   
@@ -549,7 +589,7 @@
                           {% if link.title != "OFFERS"%}
                             {%- for childlink in link.links -%}
                             <li>
-                              <a href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                              <a href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %} >
                                 {{ childlink.title | escape }}
                               </a>
                               {%- if childlink.links != blank -%}
@@ -567,21 +607,80 @@
                           {%- endfor -%}
                             {% else %}
 <!--START  вывод блока-->
-1233
+
                           {% for block in section.blocks %}  
                                {% case block.type %}
   
                                {% when 'product' %}
-                                 <h2 class="product__title {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
-                                {%- if product.title != blank -%}
-                                {{ product.title | escape }}
-                                {%- else -%}
-                                {{ 'onboarding.product_title' | t }}
-                                {%- endif -%}
-                                </h2>
+                                
+                                <div class="menu__cart-product__wrapper">
+                                  <a href="{{block.settings.product.url}}" class="menu__cart-product__link"></a>
+                                  <div class='menu__cart-product__image'>
+                                    <img src="{{block.settings.product.featured_image | image_url: width: 300}}" alt="" class='menu__cart-product__picture' loading='lazy'>
+                                  </div>
+                                  <div class='menu__cart-product__title'>{{block.settings.product.title}}</div>
+                                  <div class='menu__cart-product__price'>{{block.settings.product.price | money_with_currency}}</div>
+                                  <product-form>
+                                    {%- form 'product',
+                                      block.settings.product,
+                                      id: product_form_id,
+                                      class: 'form',
+                                      novalidate: 'novalidate',
+                                      data-type: 'add-to-cart-form'
+                                    -%}
+                                      <input
+                                        type="hidden"
+                                        name="id"
+                                        value="{{ block.settings.product.selected_or_first_available_variant.id }}"
+                                        disabled
+                                      >
+                                      <button
+                                        id="{{ product_form_id }}-submit"
+                                        type="submit"
+                                        name="add"
+                                        class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
+                                        aria-haspopup="dialog"
+                                        aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ block.settings.product.id }}"
+                                        aria-live="polite"
+                                        data-sold-out-message="true"
+                                        {% if block.settings.product.selected_or_first_available_variant.available == false %}
+                                          disabled
+                                        {% endif %}
+                                      >
+                                        <span>
+                                          {%- if block.settings.product.selected_or_first_available_variant.available -%}
+                                            {{ 'products.product.add_to_cart' | t }}
+                                          {%- else -%}
+                                            {{ 'products.product.sold_out' | t }}
+                                          {%- endif -%}
+                                        </span>
+                                        <span class="sold-out-message hidden">
+                                          {{ 'products.product.sold_out' | t }}
+                                        </span>
+                                        {%- if horizontal_quick_add -%}
+                                          <span class="icon-wrap">{% render 'icon-plus' %}</span>
+                                        {%- endif -%}
+                                        <div class="loading-overlay__spinner hidden">
+                                          <svg
+                                            aria-hidden="true"
+                                            focusable="false"
+                                            class="spinner"
+                                            viewBox="0 0 66 66"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                          </svg>
+                                        </div>
+                                      </button>
+                                    {%- endform -%}
+                                  </product-form>
+                                  
+                                </div>
+                                
                           
-                              {% when 'product' %}
-                 
+                              
+                                
+
                           
                               {% endcase %}
                               {% endfor %}
@@ -1142,16 +1241,16 @@
       "type": "@app"
     },
     {
-       "name": "product",
-       "type": "product",
-       "settings": [
-         {
-          "type": "product",
-          "id": "product",
-      "label": "Product"
-         }
-       ]
-     }
+      "name": "product",
+      "type": "product",
+      "settings": [
+        {
+        "type": "product",
+        "id": "product",
+        "label": "Product"
+       }
+      ]
+    }
   ]
 }
 {% endschema %}
