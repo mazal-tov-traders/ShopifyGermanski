@@ -15,6 +15,11 @@
           "settings": {
           }
         },
+        "d731dd70-d439-4e86-981f-b4b325c6c1af": {
+          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-star-rating\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+          "settings": {
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -48,11 +53,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "d731dd70-d439-4e86-981f-b4b325c6c1af": {
-          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-star-rating\/bf2eea72-0400-4db1-8908-44b7418f9a88",
-          "settings": {
-          }
         }
       },
       "block_order": [
@@ -68,7 +68,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "media_size": "large",
+        "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "stacked",
@@ -79,6 +79,28 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
+      }
+    },
+    "alireviews-section-ff02a4b6-3395-4b60-9256-ecf81c89655d": {
+      "type": "apps",
+      "blocks": {
+        "e986700e-5a1b-4ffe-97fd-df693b45b231": {
+          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-box\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+          "settings": {
+            "product": "apple-cinnamon",
+            "name": "Review Box",
+            "vertical_alignment": "5",
+            "rating_color": "#1f1f1f",
+            "section_color": "#ffffff",
+            "primary_text_color": "#1f1f1f"
+          }
+        }
+      },
+      "block_order": [
+        "e986700e-5a1b-4ffe-97fd-df693b45b231"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "related-products": {
@@ -96,27 +118,6 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
-      }
-    },
-    "alireviews-section-ff02a4b6-3395-4b60-9256-ecf81c89655d": {
-      "type": "apps",
-      "blocks": {
-        "e986700e-5a1b-4ffe-97fd-df693b45b231": {
-          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-box\/bf2eea72-0400-4db1-8908-44b7418f9a88",
-          "settings": {
-            "name": "Review Box",
-            "vertical_alignment": "2",
-            "rating_color": "#1F1F1F",
-            "section_color": "#ffffff",
-            "primary_text_color": "#1F1F1F"
-          }
-        }
-      },
-      "block_order": [
-        "e986700e-5a1b-4ffe-97fd-df693b45b231"
-      ],
-      "settings": {
-        "include_margins": true
       }
     }
   },

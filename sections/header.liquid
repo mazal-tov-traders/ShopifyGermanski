@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'my-styles.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- if settings.predictive_search_enabled -%}
   <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -610,80 +611,152 @@
 
                           {% for block in section.blocks %}  
                                {% case block.type %}
-  
+                                
                                {% when 'product' %}
-                                
+                                {% assign product = block.settings.product%}
                                 <div class="menu__cart-product__wrapper">
-                                  <a href="{{block.settings.product.url}}" class="menu__cart-product__link"></a>
-                                  <div class='menu__cart-product__image'>
-                                    <img src="{{block.settings.product.featured_image | image_url: width: 300}}" alt="" class='menu__cart-product__picture' loading='lazy'>
-                                  </div>
-                                  <div class='menu__cart-product__title'>{{block.settings.product.title}}</div>
-                                  <div class='menu__cart-product__price'>{{block.settings.product.price | money_with_currency}}</div>
-                                  <product-form>
-                                    {%- form 'product',
-                                      block.settings.product,
-                                      id: product_form_id,
-                                      class: 'form',
-                                      novalidate: 'novalidate',
-                                      data-type: 'add-to-cart-form'
-                                    -%}
-                                      <input
-                                        type="hidden"
-                                        name="id"
-                                        value="{{ block.settings.product.selected_or_first_available_variant.id }}"
-                                        disabled
-                                      >
-                                      <button
-                                        id="{{ product_form_id }}-submit"
-                                        type="submit"
-                                        name="add"
-                                        class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
-                                        aria-haspopup="dialog"
-                                        aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ block.settings.product.id }}"
-                                        aria-live="polite"
-                                        data-sold-out-message="true"
-                                        {% if block.settings.product.selected_or_first_available_variant.available == false %}
-                                          disabled
-                                        {% endif %}
-                                      >
-                                        <span>
-                                          {%- if block.settings.product.selected_or_first_available_variant.available -%}
-                                            {{ 'products.product.add_to_cart' | t }}
-                                          {%- else -%}
-                                            {{ 'products.product.sold_out' | t }}
-                                          {%- endif -%}
-                                        </span>
-                                        <span class="sold-out-message hidden">
-                                          {{ 'products.product.sold_out' | t }}
-                                        </span>
-                                        {%- if horizontal_quick_add -%}
-                                          <span class="icon-wrap">{% render 'icon-plus' %}</span>
-                                        {%- endif -%}
-                                        <div class="loading-overlay__spinner hidden">
-                                          <svg
-                                            aria-hidden="true"
-                                            focusable="false"
-                                            class="spinner"
-                                            viewBox="0 0 66 66"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                          >
-                                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                                          </svg>
-                                        </div>
-                                      </button>
-                                    {%- endform -%}
-                                  </product-form>
                                   
-                                </div>
-                                
-                          
-                              
-                                
+                                  <div class='menu__cart-product__image'>
+                                    <img src="{{product.featured_image | image_url: width: 300}}" alt="" class='menu__cart-product__picture' loading='lazy'>
 
-                          
+                                    <div class="menu__cart-product_image-hover-wrapper">
+                                      <ul class="menu__cart-product_hover-block-style">
+                                        <li class="menu__cart-product-quick-view">
+                                          <a href="{{product.url}}" class="menu__cart-product__link">
+                                            sdsd
+                                          </a>
+                                        </li>
+                                        <li class="menu__cart-product_view-details">
+                                         <a>ss</a>
+                                         </li>
+                                        <li class="menu__cart-product_add-to-cart">
+
+                                          <product-form style="background-color: #574574;">
+                                             {%- form 'product',
+                                               product,
+                                               id: product_form_id,
+                                               class: 'form',
+                                               novalidate: 'novalidate',
+                                               data-type: 'add-to-cart-form'
+                                             -%}
+                                               <input
+                                                 type="hidden"
+                                                 name="id"
+                                                 value="{{ product.selected_or_first_available_variant.id }}"
+                                                 disabled
+                                               >
+                                               <button
+                                                 id="{{ product_form_id }}-submit"
+                                                 type="submit"
+                                                 name="add"
+                                                 class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
+                                                 aria-haspopup="dialog"
+                                                 aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ product.id }}"
+                                                 aria-live="polite"
+                                                 data-sold-out-message="true"
+                                                 {% if product.selected_or_first_available_variant.available == false %}
+                                                   disabled
+                                                 {% endif %}
+                                               >
+                                                 <span>
+                                                   {%- if product.selected_or_first_available_variant.available -%}
+                                                     {{ 'products.product.add_to_cart' | t }}
+                                                   {%- else -%}
+                                                     {{ 'products.product.sold_out' | t }}
+                                                   {%- endif -%}
+                                                 </span>
+                                                 <span class="sold-out-message hidden">
+                                                   {{ 'products.product.sold_out' | t }}
+                                                 </span>
+                                                 {%- if horizontal_quick_add -%}
+                                                   <span class="icon-wrap">{% render 'icon-plus' %}</span>
+                                                 {%- endif -%}
+                                                 <div class="loading-overlay__spinner hidden">
+                                                   <svg
+                                                     aria-hidden="true"
+                                                     focusable="false"
+                                                     class="spinner"
+                                                     viewBox="0 0 66 66"
+                                                     xmlns="http://www.w3.org/2000/svg"
+                                                   >
+                                                     <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                   </svg>
+                                                 </div>
+                                               </button>
+                                              {%- endform -%}
+                                            </product-form>
+
+                                        </li>
+                                      </ul>
+                                    </div>
+
+                                  </div>
+
+                                  <div class ="menu__cart-product_down-box">
+                                    
+                                  <div class='menu__cart-product__raiting'>{{product.apple-cinnamon}}</div>
+
+                                  {%- if product.metafields.reviews.rating.value != blank -%}
+                  {% liquid
+                    assign rating_decimal = 0
+                    assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
+                    if decimal >= 0.3 and decimal <= 0.7
+                      assign rating_decimal = 0.5
+                    elsif decimal > 0.7
+                      assign rating_decimal = 1
+                    endif
+                  %}
+                  <div
+                    class="rating"
+                    role="img"
+                    aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="rating-star color-icon-{{ settings.accent_icons }}"
+                      style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
+                    ></span>
+                  </div>
+                  <p class="rating-text caption">
+                    <span aria-hidden="true">
+                      {{- product.metafields.reviews.rating.value }} /
+                      {{ product.metafields.reviews.rating.value.scale_max -}}
+                    </span>
+                  </p>
+                  <p class="rating-count caption">
+                    <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
+                    <span class="visually-hidden">
+                      {{- product.metafields.reviews.rating_count }}
+                      {{ 'accessibility.total_reviews' | t -}}
+                    </span>
+                  </p>
+                {%- endif -%}
+
+
+
+                                  
+                                  
+                                  <div class='menu__cart-product__title'>{{product.title}}</div>
+
+                                  <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes  }}>
+                                    {%- render 'price',
+                                      product: product money,
+                                      use_variant: true,
+                                      show_badges: true,
+                                      price_class: 'price--large',
+                                      
+                                    -%}
+                                  </div>
+                                  
+                                  
+
+
+                                  </div>
+                                  
+
+                                </div>
                               {% endcase %}
-                              {% endfor %}
+                            {% endfor %}                            
 <!--END вывод блока-->
                             {% endif %}
                           
@@ -1020,6 +1093,9 @@
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
+
+
+  
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -1038,7 +1114,7 @@
     }
   </script>
 {%- endif -%}
-
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {% schema %}
 {
   "name": "t:sections.header.name",
@@ -1249,6 +1325,17 @@
         "id": "product",
         "label": "Product"
        }
+      ]
+    },
+    {
+      "type": "rating",
+      "name": "t:sections.featured-product.blocks.rating.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.featured-product.blocks.rating.settings.paragraph.content"
+        }
       ]
     }
   ]
