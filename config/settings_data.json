@@ -143,15 +143,7 @@
     },
     "content_for_index": [
 
-    ],
-    "blocks": {
-      "86916856101191172948": {
-        "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-popup\/bf2eea72-0400-4db1-8908-44b7418f9a88",
-        "disabled": true,
-        "settings": {
-        }
-      }
-    }
+    ]
   },
   "presets": {
     "Default": {

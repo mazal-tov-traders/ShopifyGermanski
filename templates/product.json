@@ -15,34 +15,14 @@
           "settings": {
           }
         },
-        "d731dd70-d439-4e86-981f-b4b325c6c1af": {
-          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-star-rating\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+        "b7cf5bdb-68e0-48d1-96e1-cf0c412a20bf": {
+          "type": "shopify:\/\/apps\/rivo-product-reviews-app-ugc\/blocks\/reviews-widget\/5f785e18-66cc-4519-8181-565d1cce1705",
           "settings": {
           }
         },
-        "c73268ea-5e31-4daf-bf69-ebbdc03ed1e9": {
-          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/review-carousel-basic\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+        "b0e11470-c215-48c0-9b49-cea746555990": {
+          "type": "shopify:\/\/apps\/rivo-product-reviews-app-ugc\/blocks\/star-rating\/5f785e18-66cc-4519-8181-565d1cce1705",
           "settings": {
-            "number_of_columns_desktop": 5,
-            "columns_spacing": 19,
-            "enable_autoplay": true,
-            "autoplay_speed": 10,
-            "border_radius": 16,
-            "primary_text_color": "#e3e535",
-            "font_size": 14,
-            "customer_name_format": "full_name",
-            "show_title": true,
-            "review_title": "Customer Reviews",
-            "on_click_review": "show_popup_detail",
-            "rating_icon_shape": "default",
-            "rating_icon_filled_color": "#28293D",
-            "rating_icon_empty_color": "#D9D9D9",
-            "rating_icon_size": 16,
-            "product_ids": [
-              "apple-cinnamon",
-              "caramel-sea-salt",
-              "mixed-berry"
-            ]
           }
         },
         "price": {
@@ -83,8 +63,8 @@
       "block_order": [
         "vendor",
         "title",
-        "d731dd70-d439-4e86-981f-b4b325c6c1af",
-        "c73268ea-5e31-4daf-bf69-ebbdc03ed1e9",
+        "b7cf5bdb-68e0-48d1-96e1-cf0c412a20bf",
+        "b0e11470-c215-48c0-9b49-cea746555990",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -109,22 +89,6 @@
     },
     "alireviews-section-ff02a4b6-3395-4b60-9256-ecf81c89655d": {
       "type": "apps",
-      "blocks": {
-        "e986700e-5a1b-4ffe-97fd-df693b45b231": {
-          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-box\/bf2eea72-0400-4db1-8908-44b7418f9a88",
-          "settings": {
-            "product": "apple-cinnamon",
-            "name": "Review Box",
-            "vertical_alignment": "5",
-            "rating_color": "#574574",
-            "section_color": "#ffffff",
-            "primary_text_color": "#1f1f1f"
-          }
-        }
-      },
-      "block_order": [
-        "e986700e-5a1b-4ffe-97fd-df693b45b231"
-      ],
       "settings": {
         "include_margins": true
       }
