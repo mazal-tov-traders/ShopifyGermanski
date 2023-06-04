@@ -24,9 +24,17 @@
   {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
-  <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+  
 {%- endif -%}
+{{ 'component-rating.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
 
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 <!--  asasasas-->
 
 
@@ -607,9 +615,12 @@
                             </li>
                           {%- endfor -%}
                             {% else %}
+
+                            
+
 <!--START  вывод блока-->
 
-                          {% for block in section.blocks %}  
+                           {% for block in section.blocks %}  
                                {% case block.type %}
                                 
                                {% when 'product' %}
@@ -693,28 +704,63 @@
                                   </div>
 
                                   <div class ="menu__cart-product_down-box">
+                                    {% comment %} rating {% endcomment %}
+                                    {%- if show_rating and product.metafields.reviews.rating.value != blank -%}
+                                      {% liquid
+                                        assign rating_decimal = 0
+                                        assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
+                                        if decimal >= 0.3 and decimal <= 0.7
+                                          assign rating_decimal = 0.5
+                                        elsif decimal > 0.7
+                                          assign rating_decimal = 1
+                                        endif
+                                      %}
+                                      <div
+                                        class="rating"
+                                        role="img"
+                                        aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
+                                      >
+                                        <span
+                                          aria-hidden="true"
+                                          class="rating-star color-icon-{{ settings.accent_icons }}"
+                                          style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
+                                        ></span>
+                                      </div>
+                                      <p class="rating-text caption">
+                                        <span aria-hidden="true">
+                                          {{- product.metafields.reviews.rating.value }} /
+                                          {{ product.metafields.reviews.rating.value.scale_max -}}
+                                        </span>
+                                      </p>
+                                      <p class="rating-count caption">
+                                        <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
+                                        <span class="visually-hidden">
+                                          {{- product.metafields.reviews.rating_count }}
+                                          {{ 'accessibility.total_reviews' | t -}}
+                                        </span>
+                                      </p>
+                                    {%- endif -%}
 
-                                  <div class='menu__cart-product__title'>{{product.title}}</div>
+                                    <div product-id="{{ product.id }}" product-handle="{{ product.handle }}" class="alireviews-review-star-rating"></div>
+                                       
+                                    {% comment %} rating {% endcomment %}
+                
+                                    <div class='menu__cart-product__title'>{{product.title}}</div>
+  
+                                    <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes  }}>
+                                     {%- render 'price',
+                                        product: product money,
+                                        use_variant: true,
+                                        show_badges: true,
+                                        price_class: 'price--large', 
+                                      -%}
+                                    </div>    
 
-                                  <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes  }}>
-                                    {%- render 'price',
-                                      product: product money,
-                                      use_variant: true,
-                                      show_badges: true,
-                                      price_class: 'price--large',
-                                      
-                                    -%}
                                   </div>
-                                  
-                                  
-
-
-                                  </div>
-                                  
 
                                 </div>
                               {% endcase %}
-                            {% endfor %}                            
+                            {% endfor %}        
 <!--END вывод блока-->
                             {% endif %}
                           
@@ -1079,6 +1125,13 @@
   "class": "section-header",
   "max_blocks": 3,
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.show_rating.label",
+      "info": "t:sections.featured-collection.settings.show_rating.info"
+    },
     {
       "type": "select",
       "id": "logo_position",

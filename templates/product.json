@@ -15,16 +15,6 @@
           "settings": {
           }
         },
-        "b7cf5bdb-68e0-48d1-96e1-cf0c412a20bf": {
-          "type": "shopify:\/\/apps\/rivo-product-reviews-app-ugc\/blocks\/reviews-widget\/5f785e18-66cc-4519-8181-565d1cce1705",
-          "settings": {
-          }
-        },
-        "b0e11470-c215-48c0-9b49-cea746555990": {
-          "type": "shopify:\/\/apps\/rivo-product-reviews-app-ugc\/blocks\/star-rating\/5f785e18-66cc-4519-8181-565d1cce1705",
-          "settings": {
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -58,13 +48,17 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "cb46e08e-d74c-483e-aebc-b74d187ba88b": {
+          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-star-rating\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "vendor",
         "title",
-        "b7cf5bdb-68e0-48d1-96e1-cf0c412a20bf",
-        "b0e11470-c215-48c0-9b49-cea746555990",
+        "cb46e08e-d74c-483e-aebc-b74d187ba88b",
         "price",
         "variant_picker",
         "quantity_selector",
