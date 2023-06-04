@@ -8,13 +8,15 @@ a{
 }
 .announcement-bar__wrapper{
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+  height: 40px;
 }
 .elementor-heading-title a{
-    color: #fff;
+    color: #000;
     font-family: "Jost", Sans-serif;
     font-size: 15px;
     font-weight: 400;
+    opacity: 0.7;
   
 }
 .elementor-button-link.elementor-button span{
@@ -24,6 +26,35 @@ a{
     font-style: italic;
     color: #fff;
     padding: 0px 0px 0px 0px;
+}
+.announcement-bar__wrapper .elementor-heading-title.elementor-size-default{
+  
+  align-items: center; 
+  display: flex;
+}
+.announcement-bar__wrapper .test-test{
+  display: flex;
+  align-items: center;
+  font-family: "Jost", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.announcement-bar__wrapper .elementor-button-link.elementor-button.elementor-size-sm{
+  display: flex;
+  align-items: center;
+  
+}
+.elementor-button-text{
+  font-family: "Jost", Sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: italic;
+}
+.elementor-heading-title.elementor-size-default :hover{
+  opacity: 0.99;
+}
+.elementor-button-content-wrapper :hover{
+  opacity: 0.5;
 }
 /* END my styles */
 /*  !!!*/
@@ -2286,7 +2317,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .announcement-bar__message {
-  padding: 1rem 0;
+ 
   margin: 0;
   letter-spacing: 0.1rem;
 }
