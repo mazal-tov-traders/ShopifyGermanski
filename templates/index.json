@@ -6,14 +6,21 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "TOTAL CONFIDENCE",
             "heading_size": "h0"
+          }
+        },
+        "f7de34cf-2b14-45e3-8b0f-d835c490d668": {
+          "type": "text",
+          "settings": {
+            "text": "COVER TATTOOS, SCARS, ACNE, DISCOLORATION, WRINKLES",
+            "text_style": "subtitle"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "SHOP NOW",
             "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
@@ -24,11 +31,13 @@
       },
       "block_order": [
         "heading",
+        "f7de34cf-2b14-45e3-8b0f-d835c490d668",
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image": "shopify:\/\/shop_images\/03-1536348774.jpg",
+        "image_overlay_opacity": 10,
+        "image_height": "small",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
