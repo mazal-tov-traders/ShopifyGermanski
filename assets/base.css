@@ -111,13 +111,13 @@ a{
 .color-background-2 .button--secondary,
 .color-accent-1 .button--secondary,
 .color-accent-2 .button--secondary {
-  --color-button: var(--color-background);
-  --color-button-text: var(--color-foreground);
+  /* --color-button: var(--color-background);
+  --color-button-text: var(--color-foreground); */
 }
 
 .color-inverse .button--secondary {
-  --color-button: var(--color-background);
-  --color-button-text: var(--color-foreground);
+  /* --color-button: var(--color-background);
+  --color-button-text: var(--color-foreground); */
 }
 
 .button--tertiary {
@@ -1501,6 +1501,7 @@ button.shopify-payment-button__button--unbranded {
 .button--full-width {
   display: flex;
   width: 100%;
+  background-color: #574574;
 }
 
 .button.loading {
