@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Montserrat:ital,wght@0,700;1,500&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Jost&family=Montserrat:ital,wght@0,700;1,500&display=swap');
+.banner__content .banner__box .banner__heading.inline-richtext.h1{
+  color: #574574;
+  font-family: 'Homemade Apple', cursive;
+  font-size: 77px;
+  font-weight: 400;
+  line-height: 99px;
+  letter-spacing: -4.5px;
+}
 .banner {
   display: flex;
   position: relative;
@@ -142,7 +152,8 @@
 }
 
 .banner__media {
-  height: 100%;
+  height: 585px;
+  
   position: absolute;
   left: 0;
   top: 0;
@@ -170,7 +181,7 @@
 
 @media screen and (min-width: 750px) {
   .banner__media {
-    height: 100%;
+    /* height: 100%; */
   }
 }
 
@@ -305,7 +316,7 @@
 }
 
 .banner__box {
-  padding: 4rem 3.5rem;
+  /* padding: 4rem 3.5rem; */
   position: relative;
   height: fit-content;
   align-items: center;
@@ -397,10 +408,16 @@
 
 .banner__heading {
   margin-bottom: 0;
+  color: #2d2d2d;
+    font-family: "Roboto", Sans-serif;
+    font-size: 55px;
+    font-weight: 300;
+    line-height: 100px;
+    letter-spacing: 5.8px;
 }
 
 .banner__box .banner__heading + * {
-  margin-top: 1rem;
+  margin-top: 5rem;
 }
 
 .banner__buttons {
@@ -434,7 +451,10 @@
 }
 
 .banner__box > * + .banner__buttons {
-  margin-top: 2rem;
+  margin-top: 6rem;
+  background-color: #574574;
+  height: 40px;
+    width: 150px;
 }
 
 @media screen and (max-width: 749px) {

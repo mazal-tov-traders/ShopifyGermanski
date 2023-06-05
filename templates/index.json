@@ -3,6 +3,13 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
+        "a50479f7-cd38-4fef-8004-9a9c3de8404b": {
+          "type": "heading",
+          "settings": {
+            "heading": "Total Coverage",
+            "heading_size": "h1"
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
@@ -30,12 +37,13 @@
         }
       },
       "block_order": [
+        "a50479f7-cd38-4fef-8004-9a9c3de8404b",
         "heading",
         "f7de34cf-2b14-45e3-8b0f-d835c490d668",
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/03-1536348774.jpg",
+        "image": "shopify:\/\/shop_images\/11111.webp",
         "image_overlay_opacity": 10,
         "image_height": "small",
         "desktop_content_position": "bottom-center",
