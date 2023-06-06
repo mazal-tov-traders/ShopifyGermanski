@@ -77,7 +77,7 @@
             "proposal_product": "mixed-berry"
           }
         },
-        "031a5d50-0a2c-468f-a7fd-fefab060b8a7": {
+        "456402f7-0d7d-48a5-825b-9de1e17c23e8": {
           "type": "product",
           "settings": {
             "proposal_product": "атласна-сорочка-з-опущеними-проймами-1"
@@ -88,10 +88,10 @@
         "4fc2a06e-c5db-49ba-bfac-c0da33fe66d9",
         "efc8dd7c-baef-47f8-be99-dd6b63eb14bb",
         "083730e7-2d05-4aeb-99f0-fa6cb942899f",
-        "031a5d50-0a2c-468f-a7fd-fefab060b8a7"
+        "456402f7-0d7d-48a5-825b-9de1e17c23e8"
       ],
       "settings": {
-        "include_margins": true
+        "slider_items": 2
       }
     },
     "b309dd9a-2fc8-45d6-bce8-f366f0dcc1a1": {
