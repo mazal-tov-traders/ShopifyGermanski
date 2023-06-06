@@ -1,7 +1,3 @@
-.mega-menu__content.gradient.motion-reduce.global-settings-popup {
-  height: 450px;
-  
-}
 
 .mega-menu {
   position: static;
@@ -90,9 +86,9 @@
 }
 
 .mega-menu .mega-menu__list--condensed {
-  display: block;
+  
   display: flex;
-  justify-content: space-between;
+  justify-content: center
 }
 
 .mega-menu__list--condensed .mega-menu__link {
