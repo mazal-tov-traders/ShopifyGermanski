@@ -12,6 +12,8 @@ a{
   display: flex;
   justify-content: space-between;
   height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .elementor-heading-title a{
     color: #000;
@@ -69,6 +71,8 @@ a{
 .header-wrapper header.header--middle-left.header--mobile-center.page-width.header--has-menu{
   display: flex;
   justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15pxsh;
 }
 .header__icons .header__menu-item.link-blog{
   padding: 0;
@@ -330,7 +334,7 @@ html.no-js .no-js-hidden {
 .page-width {
   /* max-width: var(--page-width); */
   margin: 0 auto;
-  padding: 0 1.5rem;
+  /* padding: 0 1.5rem; */
 }
 
 .page-width.drawer-menu {
