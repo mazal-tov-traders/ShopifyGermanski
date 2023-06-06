@@ -1,46 +1,53 @@
-{% if section.blocks.size > 0 %}
-  <div class="slider-product-proposal">
-    <div class="conrainer slider-product-proposal__container">
-      <div class="slider-product-proposal__content">
-        <h2 class="slider-product-proposal__title">Produt title</h2>
-        <div class="slider-product-proposal__subtitle">Produt subtitle</div>
-      </div>
-      <div class="slider-product-proposal__slider">
-        <div class="slider-product-proposal__slider-list">
-          {% for block in section.blocks %}
-            {% if block.settings.proposal_product != blank %}
-              {% assign product = block.settings.proposal_product %}
-              <div class="slider-product-proposal__slider-item">
-                <div class="slider-item__image">
-                  <img
-                    src="{{ product.featured_image | img_url: '700x' }}"
-                    alt="{{ product.featured_image.alt | default: product.title  }}"
-                    class="slider-item__picture"
-                    loading="lazy"
-                  >
-                </div>
-                <h4 class="slider-item__title">{{ product.title }}</h4>
+{% if section.blocks.size > 0 %}<div class="slider-product-proposal">
+  <div class="container slider-product-proposal__container">
+    <div class="slider-product-proposal__content">
+      <h2 class="slider-product-proposal__title"></h2>
+      <div class="slider-product-proposal__subtitle"></div>
+    </div>
+    <div class="slider-product-proposal__slider">
+      <div class="slider-product-proposal__slider-list">
+        {% for block in section.blocks %}
+          {% if block.settings.proposal_product != blank %}
+            {% assign product = block.settings.proposal_product %}
+            <div class="slider-product-proposal__slider-item">
+              <a href="{{ product.url }}" class="slider-item__link"></a>
+              <div class="slider-item__image">
+                <img src="{{ product.featured_image | img_url: '700x' }}" alt="{{ product.featured_image.alt | default: product.title  }}" class="slider-item__picture" loading="lazy">
+              </div>              
+              <h4 class="slider-item__title">{{ product.title }}</h4>
+              
+              <div class="slider-item__price">
+                {{ product.price | money_with_currency }}
               </div>
-            {% endif %}
-          {% endfor %}
-        </div>
+              
+            </div>              
+          {% endif %}        
+        {% endfor %}
       </div>
     </div>
+    
   </div>
+</div>  
 {% endif %}
+
 {{ 'custom.css' | asset_url | stylesheet_tag }}
 {{ 'slick.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'jquery-3.7.0.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     $('#shopify-section-{{section.id}} .slider-product-proposal__slider-list').slick({
       infinite: true,
       slidesToShow: {{ section.settings.slider_items }},
-      slidesToScroll: 3
+      slidesToScroll: 3,
+     
+      responsive: [
+        
+      ]
     });
-
+    
   });
 </script>
 {% schema %}

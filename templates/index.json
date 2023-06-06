@@ -77,10 +77,22 @@
             "proposal_product": "mixed-berry"
           }
         },
-        "456402f7-0d7d-48a5-825b-9de1e17c23e8": {
+        "fb006042-da3c-48bf-8720-618d54b1b4eb": {
           "type": "product",
           "settings": {
-            "proposal_product": "атласна-сорочка-з-опущеними-проймами-1"
+            "proposal_product": "apple-cinnamon"
+          }
+        },
+        "7a646659-d411-4abb-8a3b-3010bcc5f0da": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "caramel-sea-salt"
+          }
+        },
+        "cdfd2b99-c5d6-4b00-8bce-352e4b0ff8b1": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "mixed-berry"
           }
         }
       },
@@ -88,10 +100,12 @@
         "4fc2a06e-c5db-49ba-bfac-c0da33fe66d9",
         "efc8dd7c-baef-47f8-be99-dd6b63eb14bb",
         "083730e7-2d05-4aeb-99f0-fa6cb942899f",
-        "456402f7-0d7d-48a5-825b-9de1e17c23e8"
+        "fb006042-da3c-48bf-8720-618d54b1b4eb",
+        "7a646659-d411-4abb-8a3b-3010bcc5f0da",
+        "cdfd2b99-c5d6-4b00-8bce-352e4b0ff8b1"
       ],
       "settings": {
-        "slider_items": 2
+        "slider_items": 3
       }
     },
     "b309dd9a-2fc8-45d6-bce8-f366f0dcc1a1": {
