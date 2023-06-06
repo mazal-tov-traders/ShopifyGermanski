@@ -60,8 +60,8 @@ a{
 .elementor-button-content-wrapper :hover{
   opacity: 0.5;
 }
-.header__icons.header__icons-liks,
-.header__icons.header__icons-message{
+.header__icons-likee,
+.header__icons-message{
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -72,16 +72,16 @@ a{
   display: flex;
   justify-content: space-between;
   padding-left: 15px;
-  padding-right: 15pxsh;
+  padding-right: 15px;
 }
 .header__icons .header__menu-item.link-blog{
   padding: 0;
 }
 
-.header__icons.header__icons-message :hover{
+.header__icons-message :hover {
   transform: scale(1.07);
 }
-.header__icons-liks :hover{
+.header__icons-likee :hover{
   transform: scale(1.07);
 }
 
