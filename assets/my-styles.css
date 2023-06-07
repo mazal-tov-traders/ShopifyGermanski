@@ -21,7 +21,7 @@
     /* max-width: 300px; */
     
 }
-.menu__cart-product__wrapper :hover
+.menu__cart-product__wrapper :hover 
 .menu__cart-product_image-hover-wrapper {
     bottom: 99px;
  z-index: 1;
