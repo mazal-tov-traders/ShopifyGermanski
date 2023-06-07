@@ -1,5 +1,4 @@
-
-.badge.price__badge-sale.color-accent-2{
+.badge.price__badge-sale.color-accent-2 {
     position: absolute;
     top: -30rem;
     left: 15px;
@@ -13,8 +12,8 @@
     bottom: 22%;
     transition: all 500ms ease;
     /* max-width: 300px; */
-    
-/* } */  
+
+/* } */
 
 .menu__cart-product_hover-block-style {
     display: flex;
@@ -23,6 +22,7 @@
 .menu__cart-product_add-to-cart {
     background-color: #574574;
 }
+
 /* .mega-menu__list .menu__cart-product_down-box{
     background-color: #eee;
     width: 100%;
@@ -36,6 +36,7 @@
 .button--secondary:after {
     border-opacity: none;
 }
+
 /* .menu__cart-product__image{
     height: 70%;
     position: relative;
@@ -43,81 +44,88 @@
     
 } */
 
-.mega-menu__content.gradient.motion-reduce.global-settings-popup{
+.mega-menu__content.gradient.motion-reduce.global-settings-popup {
     /* max-height:477px ; */
 }
-.menu__cart-product_hover-block-style a{
-    
+
+.menu__cart-product_hover-block-style a {
+
     color: #cac9c9;
 }
 
 .menu__cart-product-quick-view,
 .menu__cart-product_view-details {
- border-right: 1px solid #fff;
- display: flex;
- height: 40px;
- max-width: 20%;
- width: 100%;
+    border-right: 1px solid #fff;
+    display: flex;
+    height: 40px;
+    max-width: 20%;
+    width: 100%;
 }
-.menu__cart-product__link{
+
+.menu__cart-product__link {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     height: 40px;
     /* max-width: 60px; */
     width: 100%;
 }
-.menu__cart-product__link-options{
+
+.menu__cart-product__link-options {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 40px;
 }
-.menu__cart-product_add-to-cart{
+
+.menu__cart-product_add-to-cart {
     display: flex;
     justify-content: center;
     max-width: 60%;
     width: 100%;
     align-items: center;
     text-align: center;
-    
+
 }
-.menu__cart-product_svg{
+
+.menu__cart-product_svg {
     padding-top: 8px;
     padding-left: 9px;
 }
 
 
 
-.menu__cart-product-quick-view :hover{
+.menu__cart-product-quick-view :hover {
     background-color: #2e2d2df0;
-  }
-.menu__cart-product_view-details :hover{
+}
+
+.menu__cart-product_view-details :hover {
     background-color: #2e2d2df0;
-  }
-.menu__cart-product_add-to-cart :hover{
+}
+
+.menu__cart-product_add-to-cart :hover {
     opacity: 50%;
 }
 
-.menu__cart-product__wrapper{
+.menu__cart-product__wrapper {
     position: relative;
     border: solid 2px #cac9c9;
     height: 100%;
-    
-    
+
+
 }
 
-.menu__cart-product__image{
+.menu__cart-product__image {
     max-width: 100%;
     width: 100%;
     height: 70%;
     overflow: hidden;
-  position:relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
-.menu__cart-product_image-hover-wrapper{
+.menu__cart-product_image-hover-wrapper {
     background-color: #574574;
     width: 100%;
     position: absolute;
@@ -126,21 +134,75 @@
     top: 80%;
 }
 
-.menu__cart-product_down-box{
+.menu__cart-product_down-box {
     max-width: 100%;
     background-color: #eee;
-    
-    
+
+
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 30%;
-  position: relative;
-  z-index: 3;
+    position: relative;
+    z-index: 3;
 }
-.menu__cart-product__wrapper:hover 
-.menu__cart-product_image-hover-wrapper{
+
+.menu__cart-product__wrapper:hover .menu__cart-product_image-hover-wrapper {
     top: 68%;
- z-index: 1;
- 
+    z-index: 1;
+
+}
+
+
+.menu-drawer__menu.list-menu .menu__cart-product__wrapper {
+    margin: 15px;
+
+}
+@media (max-width: 1000px) {
+    .header__menu-item.link-blog{
+        display: none;
+    }
+    .icon.icon-cart{
+        display: none;
+    }
+    .cart-count-bubble{
+        display: none;
+    }
+    .header__icons {
+        max-width: 130px;
+    }
+    .header--mobile-left{
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.header header-drawer {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+.header {
+    display: grid;
+    grid-template-areas: 'left-icons heading icons';
+    grid-template-columns: 2fr 2.6fr 1fr;
+}
+}
+
+@media (max-width: 750px) {
+    .announcement-bar__wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .elementor-button-content-wrapper .elementor-button-text{
+        line-height: 65px;
+    }
+    .header__icons-message{
+        display: none;
+    }
 }
