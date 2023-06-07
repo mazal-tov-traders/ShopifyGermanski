@@ -40,19 +40,21 @@
     left: -50px;
 }
 .slick-slider .slick-prev::before, .control-prev::before {
-    content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='9' height='14' viewBox='0 0 9 14'><path d='M8.13388 0.616115C7.64573 0.12796 6.85427 0.127962 6.36612 0.616118L1.0429 5.93935C0.457115 6.52514 0.457115 7.47489 1.0429 8.06067L6.36612 13.3839C6.85427 13.872 7.64573 13.872 8.13388 13.3839C8.62204 12.8957 8.62204 12.1043 8.13388 11.6161L3.51777 7.00001L8.13389 2.38388C8.62204 1.89573 8.62204 1.10427 8.13388 0.616115Z' fill='%4D5061'/></svg>");
+    content: "\276E";
     display: inline-block;	
+    font-size: 37px;
     width: 50px;
-    height: 50px;  
+    height: 38px; 
 }
 .slick-slider .slick-next, .control-next {
     right: -50px;
 }
 .slick-slider .slick-next::before, .control-next::before {
-    content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' width='9' height='14' viewBox='0 0 9 14'><path d='M0.866118 13.3839C1.35427 13.872 2.14573 13.872 2.63389 13.3839L7.9571 8.06065C8.54289 7.47486 8.54288 6.52512 7.9571 5.93933L2.63389 0.616117C2.14573 0.127961 1.35427 0.127961 0.866119 0.616117C0.377963 1.10427 0.377963 1.89573 0.866118 2.38388L5.48223 6.99999L0.866115 11.6161C0.37796 12.1043 0.377962 12.8957 0.866118 13.3839Z' fill='%4D5061'/></svg>");
+    content: " \276F ";
     display: inline-block;	
-    width: 24px;
-    height: 24px;
+    font-size: 37px;
+    width: 50px;
+    height: 38px;
 }
 /* Slick slider End */
 
@@ -74,12 +76,6 @@
 }
 
 
-/* .slider-item__picture {
-    height: inherit;
-    width: inherit;
-    object-fit: contain;
-    transition: 0.3s linear transform;
-} */
 
 
 .slider-item__image {
@@ -87,6 +83,8 @@
     width: 100%;
     height: 70%;
     overflow: hidden;
+  position:relative;
+  z-index: 1;
 }
 
 .slider-item__image img{
@@ -103,23 +101,46 @@
     flex-direction: column;
     align-items: center;
     height: 30%;
+  position: relative;
+  z-index: 3;
 }
 
 .slider-product-hover-wrapper{
     background-color: #574574;
     width: 95%;
     position: absolute;
-    z-index: -1;
+    z-index: 2;
     transition: all 500ms ease;
-    
+    top: 90%;
+  
+  
 }
 .slider-product-proposal__slider-item{
     position: relative;
 }
 
-.slider-product-proposal__slider-item :hover 
-.slider-product-hover-wrapper  {
-    bottom: 85px;
-    z-index: 20;
+
+.slider-product-proposal__slider-item:hover 
+.slider-product-hover-wrapper{
+  top: 74%;
+  z-index: 1; 
+  
 }
-https://www.figma.com/file/20HGKMONHbEXA00Ps52WVr/SM%3A-Icons-(Community)?type=design&node-id=1-1512&t=QTipg5cOOSqZ4bLF-4
+@media (max-width: 1230px) {
+.slider-product-proposal__slider-item:hover 
+.slider-product-hover-wrapper{
+  top: 79%;
+  
+  z-index: 1; 
+  
+}
+}
+@media (max-width: 1100px) {
+    .slider-product-proposal__slider-item:hover 
+    .slider-product-hover-wrapper{
+      top: 77%;
+      
+      z-index: 1; 
+      
+    }
+    }

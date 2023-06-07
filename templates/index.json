@@ -105,6 +105,7 @@
         "cdfd2b99-c5d6-4b00-8bce-352e4b0ff8b1"
       ],
       "settings": {
+        "show_rating": false,
         "slider_items": 3
       }
     },

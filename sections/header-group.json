@@ -36,7 +36,7 @@
             "product": "mixed-berry"
           }
         },
-        "b1e78cf6-f6d6-4463-9095-2d59bd64a35c": {
+        "8130062d-2596-418e-adcb-c5c1599ea378": {
           "type": "product",
           "settings": {
             "product": "apple-cinnamon"
@@ -46,7 +46,7 @@
       "block_order": [
         "679a79ec-a0dd-4c3d-9de7-96d543561dfc",
         "f2147af9-c18d-44e0-81dc-b366f7370044",
-        "b1e78cf6-f6d6-4463-9095-2d59bd64a35c"
+        "8130062d-2596-418e-adcb-c5c1599ea378"
       ],
       "settings": {
         "show_rating": false,
@@ -58,7 +58,7 @@
         "color_scheme": "background-2",
         "enable_country_selector": false,
         "enable_language_selector": false,
-        "mobile_logo_position": "center",
+        "mobile_logo_position": "left",
         "margin_bottom": 0,
         "padding_top": 0,
         "padding_bottom": 0

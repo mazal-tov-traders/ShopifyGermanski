@@ -1,17 +1,11 @@
-.menu__cart-product__wrapper{
-    position: relative;
-    border: solid 2px #cac9c9;
-    height: 100%;
-    
-    
-}
+
 .badge.price__badge-sale.color-accent-2{
     position: absolute;
-    top: 1rem;
+    top: -30rem;
     left: 15px;
 }
 
-.menu__cart-product_image-hover-wrapper {
+/* .menu__cart-product_image-hover-wrapper {
     background-color: #574574;
     width: 100%;
     position: absolute;
@@ -20,7 +14,7 @@
     transition: all 500ms ease;
     /* max-width: 300px; */
     
-}
+/* } */  
 
 .menu__cart-product_hover-block-style {
     display: flex;
@@ -29,7 +23,7 @@
 .menu__cart-product_add-to-cart {
     background-color: #574574;
 }
-.mega-menu__list .menu__cart-product_down-box{
+/* .mega-menu__list .menu__cart-product_down-box{
     background-color: #eee;
     width: 100%;
     z-index: 10;
@@ -38,16 +32,16 @@
     align-items: center;
     height: 30%;
     
-}
+} */
 .button--secondary:after {
     border-opacity: none;
 }
-.menu__cart-product__image{
+/* .menu__cart-product__image{
     height: 70%;
     position: relative;
     z-index: -1;
     
-}
+} */
 
 .mega-menu__content.gradient.motion-reduce.global-settings-popup{
     /* max-height:477px ; */
@@ -71,7 +65,7 @@
     justify-content: center;
     
     height: 40px;
-    max-width: 60px;
+    /* max-width: 60px; */
     width: 100%;
 }
 .menu__cart-product__link-options{
@@ -95,11 +89,7 @@
 }
 
 
-.mega-menu__list .menu__cart-product__wrapper :hover .menu__cart-product_image-hover-wrapper{
-    bottom: 11%;
- z-index: 1;
- 
-}
+
 .menu__cart-product-quick-view :hover{
     background-color: #2e2d2df0;
   }
@@ -108,4 +98,49 @@
   }
 .menu__cart-product_add-to-cart :hover{
     opacity: 50%;
+}
+
+.menu__cart-product__wrapper{
+    position: relative;
+    border: solid 2px #cac9c9;
+    height: 100%;
+    
+    
+}
+
+.menu__cart-product__image{
+    max-width: 100%;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+  position:relative;
+  z-index: 1;
+}
+
+.menu__cart-product_image-hover-wrapper{
+    background-color: #574574;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    transition: all 500ms ease;
+    top: 80%;
+}
+
+.menu__cart-product_down-box{
+    max-width: 100%;
+    background-color: #eee;
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30%;
+  position: relative;
+  z-index: 3;
+}
+.menu__cart-product__wrapper:hover 
+.menu__cart-product_image-hover-wrapper{
+    top: 68%;
+ z-index: 1;
+ 
 }

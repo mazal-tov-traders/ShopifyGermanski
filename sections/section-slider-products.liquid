@@ -63,7 +63,7 @@
                  {%- render 'price',
                     product: product money,
                     use_variant: true,
-                    show_badges: true,
+                    show_badges: false,
                     price_class: 'price--large', 
                   -%}
                 </div>   
@@ -136,7 +136,20 @@
       slidesToScroll: 3,
      
       responsive: [
-        
+        {
+          breakpoint: 1240,
+          settings: {
+            slidesToShow:  2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow:  1,
+            slidesToScroll: 1
+          }
+        }
       ]
     });
     
