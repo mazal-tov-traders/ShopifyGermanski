@@ -8,6 +8,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
+            "icon_announcement_bar": "shopify:\/\/shop_images\/Screenshot_2_931f4438-2dbd-43db-bdc0-e2f9ab5f5445.png",
             "text": "Free Shipping on all U.S. Orders",
             "text_alignment": "center",
             "color_scheme": "accent-2",
@@ -55,7 +56,7 @@
         "menu_type_desktop": "mega",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
-        "color_scheme": "background-2",
+        "color_scheme": "background-1",
         "enable_country_selector": false,
         "enable_language_selector": false,
         "mobile_logo_position": "left",

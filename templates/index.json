@@ -123,11 +123,18 @@
         "padding_top": 52,
         "padding_bottom": 36
       }
+    },
+    "ffa895b1-b900-49f9-816a-b03d3c5aff8d": {
+      "type": "test",
+      "settings": {
+        "get_img_test": "shopify:\/\/shop_images\/dflogo-w-guarantee.webp"
+      }
     }
   },
   "order": [
     "image_banner",
     "93160c69-5445-428b-8b03-93150ba555d1",
-    "b309dd9a-2fc8-45d6-bce8-f366f0dcc1a1"
+    "b309dd9a-2fc8-45d6-bce8-f366f0dcc1a1",
+    "ffa895b1-b900-49f9-816a-b03d3c5aff8d"
   ]
 }

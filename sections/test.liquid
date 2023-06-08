@@ -1,0 +1,34 @@
+<div class='img-test'>
+<img src="{{ section.settings.get_img_test | img_url: '328x', crop: 'center'}}">
+
+</div>
+
+<style>
+.img-test{
+  width: 200px;
+  height: 250px;
+
+}
+
+</style>
+
+{% schema %}
+{
+  "name": "test",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "get_img_test",
+      "label": "Get Imag"
+    }
+  ],
+  
+  "presets": [
+    {
+      "name": "Image get links"
+    }
+  ]
+}
+{% endschema %}

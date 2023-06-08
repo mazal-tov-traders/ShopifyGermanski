@@ -4,16 +4,7 @@
     left: 15px;
 }
 
-/* .menu__cart-product_image-hover-wrapper {
-    background-color: #574574;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    bottom: 22%;
-    transition: all 500ms ease;
-    /* max-width: 300px; */
 
-/* } */
 
 .menu__cart-product_hover-block-style {
     display: flex;
@@ -23,26 +14,11 @@
     background-color: #574574;
 }
 
-/* .mega-menu__list .menu__cart-product_down-box{
-    background-color: #eee;
-    width: 100%;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 30%;
-    
-} */
+
 .button--secondary:after {
     border-opacity: none;
 }
 
-/* .menu__cart-product__image{
-    height: 70%;
-    position: relative;
-    z-index: -1;
-    
-} */
 
 .mega-menu__content.gradient.motion-reduce.global-settings-popup {
     /* max-height:477px ; */
@@ -197,17 +173,9 @@
 }
 
 @media (max-width: 750px) {
-    .announcement-bar__wrapper {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: center;
-    }
+    
 
-    .elementor-button-content-wrapper .elementor-button-text {
-        line-height: 65px;
-    }
+    
 
     .header__icons-message,
     .header__icons-likee {

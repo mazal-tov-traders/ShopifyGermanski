@@ -1,20 +1,14 @@
 /* !!! */
 /* START my styles */
-@import url('https://fonts.googleapis.com/css2?family=Jost&family=Montserrat:ital,wght@0,700;1,500&display=swap');
- 
+
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Jost:ital,wght@0,400;0,500;1,500&family=Montserrat:ital,wght@0,700;1,500&display=swap');
 
 a{
   text-decoration: none;
   color: #000;
   font-weight: 400;
 }
-.announcement-bar__wrapper{
-  display: flex;
-  justify-content: space-between;
-  height: 40px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
+
 .elementor-heading-title a{
     color: #000;
     font-family: "Jost", Sans-serif;
@@ -24,36 +18,16 @@ a{
   
 }
 .elementor-button-link.elementor-button span{
-    font-family: "Jost", Sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    font-style: italic;
-    color: #fff;
-    padding: 0px 0px 0px 0px;
-}
-.announcement-bar__wrapper .elementor-heading-title.elementor-size-default{
-  
-  align-items: center; 
-  display: flex;
-}
-.announcement-bar__wrapper .test-test{
-  display: flex;
-  align-items: center;
   font-family: "Jost", Sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: italic;
+  color: #fff;
+  padding: 0px 0px 0px 0px;
 }
-.announcement-bar__wrapper .elementor-button-link.elementor-button.elementor-size-sm{
-  display: flex;
-  align-items: center;
-  
-}
-.elementor-button-text{
-  font-family: "Jost", Sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    font-style: italic;
-}
+
+
+
 .elementor-heading-title.elementor-size-default :hover{
   opacity: 0.99;
 }
@@ -498,7 +472,7 @@ body,
 
 .text-body {
   font-size: 1.5rem;
-  letter-spacing: 0.06rem;
+  /* letter-spacing: 0.06rem; */
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
@@ -519,7 +493,7 @@ h5,
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
-  letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
+  /* letter-spacing: calc(var(--font-heading-scale) * 0.06rem); */
   color: rgb(var(--color-foreground));
   line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
   word-break: break-word;
@@ -1111,7 +1085,7 @@ summary::-webkit-details-marker {
 .subtitle {
   /* font-size: 2.6rem; */
   line-height: calc(1 + 0.8 / var(--font-body-scale));
-  letter-spacing: 0.06rem;
+  /* letter-spacing: 0.06rem; */
   color: #574574;
   font-family: "Roboto", Sans-serif;
     font-size: 26px;
@@ -2558,7 +2532,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header__icons {
   display: flex;
   grid-area: icons;
-  justify-self: end;
+  /* justify-self: end; */
   align-items: center;
   max-width: 200px;
   width: 100%;

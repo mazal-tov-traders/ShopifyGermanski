@@ -1,6 +1,6 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/Screenshot_2.png",
+    "logo": "shopify:\/\/shop_images\/dflogo-w-guarantee_05025d06-def2-452b-9a51-a0dfa8f17a5c.webp",
     "logo_width": 300,
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
@@ -40,7 +40,7 @@
     "inputs_radius": 0,
     "inputs_shadow_opacity": 0,
     "inputs_shadow_horizontal_offset": 0,
-    "inputs_shadow_vertical_offset": 2,
+    "inputs_shadow_vertical_offset": 0,
     "inputs_shadow_blur": 5,
     "card_style": "standard",
     "card_image_padding": 0,
