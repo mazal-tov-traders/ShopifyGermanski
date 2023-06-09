@@ -50,6 +50,7 @@
         "8130062d-2596-418e-adcb-c5c1599ea378"
       ],
       "settings": {
+        "icon_drawer_menu": "shopify:\/\/shop_images\/Screenshot_3.png",
         "show_rating": false,
         "logo_position": "middle-left",
         "menu": "main-menu",

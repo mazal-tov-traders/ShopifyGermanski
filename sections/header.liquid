@@ -37,7 +37,7 @@
 <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 <!--  asasasas-->
 
-
+{{ 'header.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
@@ -219,14 +219,20 @@
   endfor
 -%}
 
+
+
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}">
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
         <details id="Details-menu-drawer-container" class="menu-drawer-container">
           <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
-            <span>
+            <span class="header__icon-menu-wrapper">
+             
               {% render 'icon-hamburger' %}
+              
+              
+          
               {% render 'icon-close' %}
             </span>
           </summary>
@@ -260,6 +266,7 @@
                                   {% render 'icon-arrow' %}
                                   {{ link.title | escape }}
                                 </button>
+                                
                                 <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                   {%- for childlink in link.links -%}
                                     <li>
@@ -378,14 +385,6 @@
                                            </div>
                                          {% endcase %}
                                        {% endfor %}
-
-
-
-
-
-
-
-
 
 
                                         </a>
@@ -1259,6 +1258,11 @@
   "class": "section-header",
   "max_blocks": 3,
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "icon_drawer_menu",
+      "label": "Icon Drawer Menu"
+    },
     {
       "type": "checkbox",
       "id": "show_rating",

@@ -1,7 +1,6 @@
 .header__icon--menu {
   position: initial;
-    background-color: #62527c;
-    border-radius: 4px;
+    
 }
 
 .js menu-drawer > details > summary::before,

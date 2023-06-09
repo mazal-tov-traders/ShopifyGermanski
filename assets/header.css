@@ -1,3 +1,9 @@
+.header__icon-menu-wrapper{
+    width: 45px;
+    background-color: #574574;
+    border-radius: 3px;
+
+}
 .badge.price__badge-sale.color-accent-2 {
     position: absolute;
     top: -30rem;
@@ -174,7 +180,10 @@
 
 @media (max-width: 750px) {
     
-
+    .header__heading-logo {
+        height: auto;
+        width: 250px;
+    }
     
 
     .header__icons-message,
@@ -190,14 +199,11 @@
     }
     .header{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+    }
+    .header__heading-logo-wrapper img{
+        width: 400px;
     }
    
 }
 
-@media (max-width: 750px) {
-.header__heading-logo {
-    height: auto;
-    width: 250px;
-}
-}
