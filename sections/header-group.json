@@ -25,6 +25,12 @@
     "header": {
       "type": "header",
       "blocks": {
+        "8130062d-2596-418e-adcb-c5c1599ea378": {
+          "type": "product",
+          "settings": {
+            "product": "apple-cinnamon"
+          }
+        },
         "679a79ec-a0dd-4c3d-9de7-96d543561dfc": {
           "type": "product",
           "settings": {
@@ -36,21 +42,15 @@
           "settings": {
             "product": "mixed-berry"
           }
-        },
-        "8130062d-2596-418e-adcb-c5c1599ea378": {
-          "type": "product",
-          "settings": {
-            "product": "apple-cinnamon"
-          }
         }
       },
       "block_order": [
+        "8130062d-2596-418e-adcb-c5c1599ea378",
         "679a79ec-a0dd-4c3d-9de7-96d543561dfc",
-        "f2147af9-c18d-44e0-81dc-b366f7370044",
-        "8130062d-2596-418e-adcb-c5c1599ea378"
+        "f2147af9-c18d-44e0-81dc-b366f7370044"
       ],
       "settings": {
-        "icon_drawer_menu": "shopify:\/\/shop_images\/Screenshot_3.png",
+        "icon_drawer_menu": "shopify:\/\/shop_images\/logo_2.webp",
         "show_rating": false,
         "logo_position": "middle-left",
         "menu": "main-menu",

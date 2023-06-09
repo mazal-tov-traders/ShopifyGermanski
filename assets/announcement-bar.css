@@ -28,7 +28,7 @@
 .test-test {
     max-width: 289px;
     width: 100%;
-    line-height: 40px;
+    line-height: 39px;
 }
 
 .elementor-heading-title a {
@@ -48,7 +48,7 @@
 .elementor-button-icon img {
     width: 17px;
     height: 23px;
-    padding-top: 1px;
+    padding-top: 2px;
 }
 .elementor-button-icon {
     padding-top: 1px;
@@ -61,7 +61,7 @@
     font-style: italic;
     color: #fff;
     padding-right: 3px;
-    line-height: 28px;
+    line-height: 27px;
 }
 
 

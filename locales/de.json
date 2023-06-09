@@ -108,7 +108,7 @@
     "product": {
       "add_to_cart": "In den Warenkorb legen",
       "description": "Beschreibung",
-      "on_sale": "Sale",
+      "on_sale": "Sale!",
       "product_variants": "Produktvarianten",
       "quantity": {
         "label": "Anzahl",
