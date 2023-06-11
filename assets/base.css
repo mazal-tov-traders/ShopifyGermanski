@@ -351,7 +351,7 @@ html.no-js .no-js-hidden {
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1060px) {
   .header:not(.drawer-menu).page-width {
     padding-left: 18px;
     padding-right: 18px;
@@ -673,7 +673,7 @@ table:not([class]) th {
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1060px) {
   .large-up-hide {
     display: none !important;
   }
@@ -1042,7 +1042,7 @@ summary::-webkit-details-marker {
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1060px) {
   .title,
   .title-wrapper-with-link {
     margin: 5rem 0 3rem;
@@ -1212,7 +1212,7 @@ summary::-webkit-details-marker {
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1060px) {
   .grid--6-col-desktop .grid__item {
     width: calc(16.66% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
     max-width: calc(16.66% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
@@ -1239,7 +1239,7 @@ summary::-webkit-details-marker {
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1060px) {
   .grid--1-col-desktop {
     flex: 0 0 100%;
     max-width: 100%;
@@ -1375,7 +1375,7 @@ summary::-webkit-details-marker {
   opacity: 0;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1060px) {
   .media--cropped {
     padding-bottom: 63%;
   }
@@ -2364,7 +2364,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .shopify-section-group-header-group {
-  z-index: 4;
+  z-index: 3;
 }
 
 .section-header ~ .shopify-section-group-header-group {
@@ -2395,7 +2395,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1060px) {
   .header {
 /*     grid-template-columns: 1fr auto 1fr; */
   }
@@ -2419,7 +2419,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
     
-    column-gap: 6rem;
+    column-gap: 1rem;
   }
 
   .header--middle-center:not(.drawer-menu) {
@@ -2490,7 +2490,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .header__heading-logo-wrapper {
-  width: 100%;
+  width: 25vw;
   display: inline-block;
   transition: width 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
 }
@@ -2512,7 +2512,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1060px) {
   .header--middle-left .header__heading-link,
   .header--top-left .header__heading-link {
     margin-left: -0.75rem;
@@ -2641,7 +2641,7 @@ menu-drawer + .header__search {
   display: inline-flex;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1060px) {
   .header:not(.header--top-center) * > .header__search,
   .header--top-center > .header__search {
     display: inline-flex;
@@ -2726,7 +2726,7 @@ details[open] .modal-overlay::after {
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1060px) {
   .search-modal__form {
     max-width: 74.2rem;
   }
@@ -2793,7 +2793,7 @@ details[open] > .header__submenu {
   margin-left: 0;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1060px) {
   .header__inline-menu {
     display: block;
   }
@@ -2938,14 +2938,14 @@ details-disclosure > details {
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1060px) {
   .overflow-hidden-tablet {
     overflow: auto;
   }
 }
 
 .badge {
-  border: 1px solid transparent;
+/*   border: 1px solid transparent;
   border-radius: var(--badge-corner-radius);
   display: inline-block;
   font-size: 1.2rem;
@@ -2956,7 +2956,19 @@ details-disclosure > details {
   background-color: rgb(var(--color-badge-background));
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
   color: rgb(var(--color-foreground));
-  word-break: break-word;
+  word-break: break-word; */
+
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    text-align: center;
+    line-height: 1.2em;
+  border-radius: 50px;
+  color: #fff;
+  font-family: "Jost", Sans-serif;
+  letter-spacing: 0.01rem;
+  
 }
 
 .gradient {

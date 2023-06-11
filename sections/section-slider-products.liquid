@@ -121,7 +121,7 @@
 </div>  
 {% endif %}
 
-{{ 'custom.css' | asset_url | stylesheet_tag }}
+{{ 'slider-products.css' | asset_url | stylesheet_tag }}
 {{ 'slick.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'jquery-3.7.0.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
@@ -134,21 +134,21 @@
       infinite: true,
       slidesToShow: {{ section.settings.slider_items }},
       slidesToScroll: 1,
-     
       responsive: [
         {
-          breakpoint: 1240,
+          breakpoint: 1380,
           settings: {
             slidesToShow:  2,
             slidesToScroll: 1,
-            arrows: false,
+            arrows: false
           }
         },
         {
           breakpoint: 576,
           settings: {
             slidesToShow:  1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            arrows: false
           }
         }
       ]

@@ -1,5 +1,5 @@
 .container.slider-product-proposal__container {
-    max-width: 1300px !important;
+    max-width: 1180px !important;
     margin: 0 auto;
 }
 .slick-slider .slick-arrow, .arrow-control {
@@ -10,10 +10,7 @@
     height: 50px;
     width: 50px;
     font-size: 0;
-    
     overflow: hidden;
-    
-    
     z-index: 1;
     border: none;
     outline: none;
@@ -39,6 +36,20 @@
 .slick-slider .slick-prev, .control-prev {
     left: -50px;
 }
+
+.slider-item__image img {
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+.slider-product_down-box{
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
+
 .slick-slider .slick-prev::before, .control-prev::before {
     content: "\276E";
     display: inline-block;	
@@ -62,7 +73,9 @@
     padding: 50px 0;
 }
 
-
+.slider-product_down-box .no-js-hidden{
+  margin-bottom: 7px;
+}
 
 
 .slider-product-proposal__control {
@@ -75,9 +88,17 @@
     overflow: hidden;
 }
 
-
-
-
+.slider-product_down-box .menu__cart-product__title{
+color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Jost",Sans-serif;
+    /* font-size: 1.2rem; */
+    letter-spacing: 0.01rem;
+    line-height: 20px;
+    margin-bottom: 8px;
+    text-align: center;
+}
 .slider-item__image {
     max-width: 95%;
     width: 100%;
@@ -94,7 +115,7 @@
 
 .slider-product_down-box{
     max-width: 95%;
-    background-color: #eee;
+    background-color: #fff;
     
     z-index: 10;
     display: flex;
@@ -122,10 +143,24 @@
 
 .slider-product-proposal__slider-item:hover 
 .slider-product-hover-wrapper{
-  top: 74%;
+  top: 67%;
   z-index: 1; 
   
 }
+@media (max-width: 1385px) {
+  .slick-prev.slick-arrow,
+  .slick-next.slick-arrow{
+    display: none ;
+  }
+  .slick-slider .slick-next:before, .control-next:before{
+    display: none ;
+  }
+  .slick-slider .slick-arrow:before, .arrow-control:before{
+    display: none ;
+  }
+  
+}
+
 @media (max-width: 1230px) {
 .slider-product-proposal__slider-item:hover 
 .slider-product-hover-wrapper{
