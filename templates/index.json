@@ -62,25 +62,29 @@
         "cffadf2c-f5ae-4bf1-a1ff-a7429b289094": {
           "type": "product",
           "settings": {
-            "proposal_product": "bronzer-highlighter-blush-palette"
+            "proposal_product": "bronzer-highlighter-blush-palette",
+            "enable_cart": false
           }
         },
         "be4553ea-50bc-4bad-970b-c98484472581": {
           "type": "product",
           "settings": {
-            "proposal_product": "tattoo-cover-up"
+            "proposal_product": "tattoo-cover-up",
+            "enable_cart": true
           }
         },
         "f04b7f96-8bf4-4acf-b702-d58b8539cf8e": {
           "type": "product",
           "settings": {
-            "proposal_product": "banana-setting-power-d-shine-by-dermaflage"
+            "proposal_product": "banana-setting-power-d-shine-by-dermaflage",
+            "enable_cart": false
           }
         },
         "e1afa144-0f79-41db-b36e-a797ad6c0b71": {
           "type": "product",
           "settings": {
-            "proposal_product": "concealer"
+            "proposal_product": "concealer",
+            "enable_cart": true
           }
         }
       },
