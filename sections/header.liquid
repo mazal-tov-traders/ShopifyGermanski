@@ -92,10 +92,7 @@
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 
 <style>
-  header-drawer {
-    {% comment %} justify-self: start;
-    margin-left: -1.2rem; {% endcomment %}
-  }
+  
 
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
@@ -234,18 +231,39 @@
               
           
               {% render 'icon-close' %}
+              
             </span>
           </summary>
+          
           <div id="menu-drawer" class="gradient menu-drawer motion-reduce" tabindex="-1">
+            
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
+                <div>
+                  <div>{{ 'https://dermaflage.com/wp-content/uploads/2021/11/dflogo-2.png' | img_tag }}</div>
+                  <button id="button_close-drawer-menu" class="button_close-drawer-menu">X</button>
+                </div>
+                
                
+                
+              
+                    
+                  
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                var headerBlock = document.getElementById('shopify-section-sections--18995950387480__header');
+                var button = document.getElementById('button_close-drawer-menu');
+                
+                button.addEventListener('click', function() {
+                  headerBlock.classList.remove('menu-opening');
+                });
+              });
+            </script>
+                
                 <nav class="menu-drawer__navigation">
                   
                   <ul class="menu-drawer__menu has-submenu list-menu" role="list">
-                    {% comment %} s
-                  sadas
-             {% endcomment %}
+                    
                     {%- for link in section.settings.menu.links -%}
                       <li>
                         {%- if link.links != blank -%}
@@ -365,7 +383,7 @@
            
                                                <div product-id="{{ product.id }}" product-handle="{{ product.handle }}" class="alireviews-review-star-rating"></div>
                                                   
-                                               {% comment %} rating {% endcomment %}
+                                               
                            
                                                <div class='menu__cart-product__title'>{{product.title}}</div>
              
