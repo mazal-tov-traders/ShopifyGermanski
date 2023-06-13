@@ -261,8 +261,67 @@
                 });
               });
             </script>
+
+          {% comment %} !!!!!!!!!!!!!!!!Мобайл мега меню!!!!!!!!!!!!!!!!!!!! {% endcomment %}
+          <nav class="menu-drawer__navigation">
+                    
+                    <ul class="menu-drawe-list_wrapper" role="list">
+                      {%- for link in section.settings.menu.links -%}
+                        <li>
+                          {%- if link.links != blank -%}
+                            <header-menu>
+                              <details id="Details-HeaderMenu-{{ forloop.index }}" >
+                                <summary class="header__menu-item list-menu__item link focus-inset">
+                                  <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                                  {% render 'icon-caret' %}
+                                </summary>
+                                
+                                <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu  gradient caption-large motion-reduce global-settings-popup" role="list" tabindex="-1">
+                                  {%- for childlink in link.links -%}
+                                    <li>
+                                      {%- if childlink.links == blank -%}
+                                        <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                          {{ childlink.title | escape }}
+                                        </a>
+                                      {%- else -%}
+                                        <details id="Details-HeaderSubMenu-{{ forloop.index }}" open>
+                                          <summary class="header__menu-item link link--text list-menu__item focus-inset caption-large">
+                                            <span>{{ childlink.title | escape }}</span>
+                                            
+                                          </summary>
+                                          <ul id="HeaderMenu-SubMenuList-{{ forloop.index }}" class="header__submenu list-menu motion-reduce">
+                                            {%- for grandchildlink in childlink.links -%}
+                                              <li>
+                                                <a href="{{ grandchildlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                                  {{ grandchildlink.title | escape }}
+                                                </a>
+                                              </li>
+                                            {%- endfor -%}
+                                          </ul>
+                                        </details>
+                                      {%- endif -%}
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              </details>
+                            </header-menu>
+                          {%- else -%}
+                            <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                              <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                            </a>
+                          {%- endif -%}
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                 
                 
-                <nav class="menu-drawer__navigation">
+                  </nav> 
+                    
+                    
+                 
+                {% comment %} !!!!!!!!!!!!!!!!!!!!!!!!!!! мобай мега меню END !!!!!!!!!!!!!!!!! {% endcomment %}
+
+                {% comment %} <nav class="menu-drawer__navigation">
                   
                   <ul class="menu-drawer__menu has-submenu list-menu" role="list">
                     
@@ -281,7 +340,8 @@
                                   {% render 'icon-arrow' %}
                                   {{ link.title | escape }}
                                 </button>
-                                
+
+       
                                 <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                   {%- for childlink in link.links -%}
                                     <li>
@@ -433,7 +493,8 @@
                                       {%- endif -%}
                                     </li>
                                   {%- endfor -%}
-                                </ul>
+                                </ul> 
+
                               </div>
                             </div>
                           </details>
@@ -446,8 +507,11 @@
                       </li>
                     {%- endfor -%}
                   </ul>
-                </nav>
-                {% comment %} <div class="menu-drawer__utility-links">
+                </nav> {% endcomment %}
+
+
+
+                 <div class="menu-drawer__utility-links">
                   {%- if shop.customer_accounts_enabled -%}
                     <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5 medium-hide large-up-hide">
                       {% render 'icon-account' %}
@@ -560,7 +624,7 @@
                       </li>
                     {%- endif -%}
                   </ul>
-                </div> {% endcomment %}
+                </div> 
               </div>
             </div>
           </div>
@@ -793,7 +857,7 @@
                                     <div class="menu__cart-product_hover-block-style">
                                       <div class="menu__cart-product-quick-view">
                                         <a href="{{product.url}}" class="menu__cart-product__link">
- <svg width="22" height="22" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="22" height="22" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_8_982)">
                                         <path d="M25.5047 11.8657C23.148 7.27322 18.4823 4.16602 13.14 4.16602C7.79765 4.16602 3.13067 7.27539 0.775234 11.8661C0.67582 12.0625 0.624023 12.2795 0.624023 12.4996C0.624023 12.7196 0.67582 12.9366 0.775234 13.133C3.13198 17.7255 7.79765 20.8327 13.14 20.8327C18.4823 20.8327 23.1493 17.7233 25.5047 13.1326C25.6041 12.9362 25.6559 12.7192 25.6559 12.4991C25.6559 12.2791 25.6041 12.0621 25.5047 11.8657ZM13.14 18.7493C11.9023 18.7493 10.6923 18.3828 9.66323 17.696C8.6341 17.0093 7.832 16.0332 7.35835 14.8911C6.8847 13.7491 6.76077 12.4924 7.00223 11.28C7.2437 10.0677 7.83972 8.95401 8.71491 8.07993C9.59011 7.20585 10.7052 6.6106 11.9191 6.36944C13.133 6.12828 14.3913 6.25205 15.5348 6.7251C16.6783 7.19815 17.6557 7.99923 18.3433 9.02703C19.0309 10.0548 19.398 11.2632 19.398 12.4993C19.3984 13.3202 19.2368 14.1331 18.9224 14.8916C18.6081 15.6501 18.1471 16.3392 17.5659 16.9197C16.9847 17.5001 16.2947 17.9605 15.5353 18.2744C14.7758 18.5884 13.9619 18.7497 13.14 18.7493ZM13.14 8.33268C12.7676 8.33788 12.3976 8.39321 12.04 8.49718C12.3348 8.89721 12.4762 9.38949 12.4387 9.88474C12.4012 10.38 12.1872 10.8454 11.8356 11.1966C11.4839 11.5478 11.0179 11.7615 10.522 11.799C10.0261 11.8364 9.53323 11.6952 9.13269 11.4008C8.90461 12.2401 8.94578 13.1296 9.25041 13.9442C9.55504 14.7589 10.1078 15.4576 10.8309 15.942C11.5539 16.4265 12.4109 16.6723 13.2812 16.6448C14.1515 16.6174 14.9912 16.318 15.6822 15.789C16.3732 15.2599 16.8807 14.5277 17.1333 13.6955C17.3858 12.8633 17.3707 11.973 17.09 11.1498C16.8094 10.3266 16.2773 9.61204 15.5687 9.10669C14.8601 8.60134 14.0107 8.33064 13.14 8.33268Z" fill="#fff"/>
                                         </g>
