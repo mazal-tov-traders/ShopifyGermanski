@@ -131,7 +131,7 @@
   .list-menu__item {
     display: flex;
     align-items: center;
-    line-height: calc(1 + 0.3 / var(--font-body-scale));
+    line-height: calc(1 + 0.5 / var(--font-body-scale));
   }
 
   .list-menu__item--link {
@@ -239,9 +239,11 @@
             
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
-                <div>
-                  <div>{{ 'https://dermaflage.com/wp-content/uploads/2021/11/dflogo-2.png' | img_tag }}</div>
-                  <button id="button_close-drawer-menu" class="button_close-drawer-menu">X</button>
+                <div class="menu-drawer__img-button-wrapper">
+                  <div class="menu-drawer__img-wrapper">
+                  <img class="menu-drawer__img" src="https://dermaflage.com/wp-content/uploads/2021/11/dflogo-2.png" alt="">
+                </div>
+                  <button id="button_close-drawer-menu" class="menu-drawer__button-close">X</button>
                 </div>
                 
                
@@ -445,7 +447,7 @@
                     {%- endfor -%}
                   </ul>
                 </nav>
-                <div class="menu-drawer__utility-links">
+                {% comment %} <div class="menu-drawer__utility-links">
                   {%- if shop.customer_accounts_enabled -%}
                     <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5 medium-hide large-up-hide">
                       {% render 'icon-account' %}
@@ -558,7 +560,7 @@
                       </li>
                     {%- endif -%}
                   </ul>
-                </div>
+                </div> {% endcomment %}
               </div>
             </div>
           </div>

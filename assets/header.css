@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Jost:ital,wght@0,400;0,500;1,500&family=Montserrat:ital,wght@0,700;1,500&display=swap');
 /* drawer */
 
   .menu-drawer {
-    top: -81%;
+    top: -85%;
 }
 .header__icon-menu-wrapper{
    
@@ -12,22 +13,42 @@
 .no-js details[open] > .menu-drawer, .js details[open].menu-opening > .menu-drawer, details[open].menu-opening > .menu-drawer__submenu {
     transform: translateX(0);
     visibility: visible;
-    height: 100vh;
-    
+    height: 104vh;
+    background-color: #f7f7f7;
 }  
 
-.button_close-drawer-menu{
-    width: 45px;
-    height: 45px;
+.menu-drawer__button-close{
+    width: 40px;
+    height: 40px;
     background-color: #fff;
-    border-radius: 3px
-    position: absolute;
-    right: 16px;
-    top: 17px;
+    font-family: "Jost", Sans-serif;
+    
+    font-weight: 700;
+    margin-right: 12px;
+    border: 1px solid #000;
+    font-size: 16px;
+    
 }
 .menu-drawer__navigation {
-    padding: 10.6rem 0;
+    padding: 0.6rem;
+
+    height: 66rem;
 }
+.menu-drawer__img-button-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px 10px 30px;
+    margin-top: 4%;
+}
+.menu-drawer__img{
+width: 120px;
+margin-top: 5px;
+    margin-left: 6px;
+}
+.menu-drawer__menu-item {
+    padding: 1.1rem 2.2rem;
+}
+
 /* end drawer */
 
 .alireviews-review-star-rating .alr-wh-star-rating, .alr-display-review-badge .alr-wh-star-rating {
@@ -301,4 +322,4 @@
     width: 1.8rem;
    
 }
-
+}
