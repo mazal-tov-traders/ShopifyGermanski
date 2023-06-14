@@ -60,23 +60,58 @@ margin-top: 5px;
 .menu-drawe-list_wrapper .header__submenu.list-menu.motion-reduce{
     background-color: #fff;
 }
-.menu-drawe-list_wrapper .header__menu-item .icon.icon-caret{
-    
-}
+
 .menu-drawe-list_wrapper .header__menu-item.list-menu__item.link.focus-inset{
 padding-left: 15px;
 }
 .menu-drawe-list_wrapper .header__menu-item span{
     padding-right: 25px;
 }
-/* end drawer */
+.header__menu-item.list-menu__item.link.focus-inset.menu-drawe-links{
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
 
+.menu-drawe-list_wrapper .drawer-menu_icon-wraper{
+ height: 20px;
+ width: 42px;
+ border: 1px solid #000;
+ border-radius: 50px;
+}
+.menu-drawe-list_wrapper summary .drawer-menu_icon-wraper  .icon-caret {
+    
+    position: relative;
+    margin: 1px 23px;
+    display: flex;
+}
+.header__menu-item.list-menu__item.link.focus-inset.menu-drawe-links:focus {
+    color: #707070;
+    
+}
+.header__menu-item.list-menu__item.link.focus-inset.menu-drawe-links:focus .drawer-menu_icon-wraper {
+    border-color: #707070;
+}
+
+.menu-drawe-list_wrapper .header__menu-item span {
+    font-size: 12px;
+}
+.menu-drawe-list_wrapper .header__menu-item.link.link--text.list-menu__item.focus-inset.caption-large span{
+    font-size: 16px;
+    font-weight: 500;
+    
+    margin-bottom: 27px;
+}
+.menu-drawe-list_wrapper .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large{
+    padding-left: 38px;
+}
+/*                             end drawer                               */
+/*                           !!!!!!!!!!                                */
 .alireviews-review-star-rating .alr-wh-star-rating, .alr-display-review-badge .alr-wh-star-rating {
     padding: 0px;
 }
-.alireviews-review-star-rating {
- 
-}
+
 .alr-wh-star-rating-average-number{
   display: none;
 }
