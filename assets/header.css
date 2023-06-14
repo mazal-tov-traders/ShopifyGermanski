@@ -10,20 +10,22 @@
     visibility: visible;
     height: 104vh;
     background-color: #f7f7f7;
+    width: 350px;
 }  
 
 .menu-drawer__button-close{
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
+    width: 45px;
+    height: 45px;
+    background-color: #73658a;
     font-family: "Jost", Sans-serif;
-    
-    font-weight: 700;
+    font-weight: 400;
     margin-right: 12px;
     border: 1px solid #000;
     font-size: 16px;
-    
+    border-radius: 3px;
 }
+    
+
 .menu-drawer__navigation {
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
@@ -33,12 +35,12 @@
 .menu-drawer__img-button-wrapper{
     display: flex;
     justify-content: space-between;
-    padding: 10px 0px 10px 30px;
+    padding: 22px 0px 10px 0px;
     margin-top: 4%;
 }
 .menu-drawer__img{
-width: 120px;
-margin-top: 5px;
+width: 165px;
+
     margin-left: 6px;
 }
 .menu-drawer__menu-item {
@@ -100,11 +102,25 @@ padding-left: 15px;
 .menu-drawe-list_wrapper .header__menu-item.link.link--text.list-menu__item.focus-inset.caption-large span{
     font-size: 16px;
     font-weight: 500;
-    
+    z-index: 1000;
     margin-bottom: 27px;
+    color: #000;
 }
 .menu-drawe-list_wrapper .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large{
     padding-left: 38px;
+}
+
+
+.menu-drawe-list_wrapper .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large {
+    
+    font-size: 14px;
+    font-weight: 400;
+      font-family: "Jost",Sans-serif;
+      color: #707070;
+      
+}
+.menu-drawe-list_wrapper .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large:hover {
+    color: #000;
 }
 /*                             end drawer                               */
 /*                           !!!!!!!!!!                                */

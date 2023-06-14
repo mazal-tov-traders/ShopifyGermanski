@@ -183,7 +183,7 @@ noscript .localization-selector.link {
 }
 
 .disclosure__link--active {
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .disclosure__button[aria-expanded="true"] .icon-caret {
@@ -203,7 +203,7 @@ noscript .localization-selector.link {
 }
 
 .header__localization .disclosure .localization-form__select:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .header__localization .localization-form__select.link:after,

@@ -224,12 +224,12 @@
 }
 
 .facets__summary span {
-  transition: text-decoration var(--duration-short) ease;
+  /* transition: text-decoration var(--duration-short) ease; */
 }
 
 .facets__summary:hover span {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  /* text-decoration: underline;
+  text-underline-offset: 0.3rem; */
 }
 
 .disclosure-has-popup[open] > .facets__summary::before {
@@ -662,12 +662,12 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__open-label {
-  transition: text-decoration var(--duration-short) ease;
+  /* transition: text-decoration var(--duration-short) ease; */
 }
 
 .mobile-facets__open:hover .mobile-facets__open-label {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  /* text-decoration: underline;
+  text-underline-offset: 0.3rem; */
 }
 
 .mobile-facets__open > * + * {

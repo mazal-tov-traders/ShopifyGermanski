@@ -127,8 +127,8 @@
   font-size: 1.2rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   letter-spacing: 0.05rem;
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  /* text-decoration: underline;
+  text-underline-offset: 0.3rem; */
 }
 
 .shopify-payment-button__button + .shopify-payment-button__button--hidden {
@@ -236,7 +236,7 @@ fieldset.product-form__input .form__label {
 
 @media screen and (forced-colors: active) {
   .product-form__input input[type=radio]:checked + label {
-    text-decoration: underline;
+    /* text-decoration: underline; */
   }
 }
 
@@ -967,9 +967,9 @@ a.product__text {
   padding-right: 1.3rem;
   padding-left: 0;
   min-height: 4.4rem;
-  text-underline-offset: 0.3rem;
+  /* text-underline-offset: 0.3rem;
   text-decoration-thickness: 0.1rem;
-  transition: text-decoration-thickness var(--duration-short) ease;
+  transition: text-decoration-thickness var(--duration-short) ease; */
 }
 
 .product-popup-modal__button:hover {
@@ -1287,8 +1287,8 @@ a.product__text {
 }
 
 .product__view-details:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  /* text-decoration: underline;
+  text-underline-offset: 0.3rem; */
 }
 
 .product__view-details .icon {
