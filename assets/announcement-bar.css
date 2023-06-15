@@ -30,16 +30,18 @@
     width: 100%;
     line-height: 39px;
 }
-
-.elementor-heading-title a {
+.announcement-bar__wrapper
+    .elementor-heading-title a {
     color: #000;
     font-family: "Jost", Sans-serif;
     font-size: 15px;
     font-weight: 400;
-    opacity: 0.6;
     line-height: 0px;
+    opacity: 90%;
 }
-
+.announcement-bar__wrapper .elementor-heading-title:hover a{
+    color: #fff;
+}
 .elementor-button-content-wrapper {
     display: flex;
     padding-top: 10px;

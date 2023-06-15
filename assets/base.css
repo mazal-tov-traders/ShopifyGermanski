@@ -17,14 +17,7 @@ a{
     z-index:50;
 }
 
-.elementor-heading-title a{
-    color: #000;
-    font-family: "Jost", Sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    opacity: 0.7;
-  
-}
+
 .elementor-button-link.elementor-button span{
   font-family: "Jost", Sans-serif;
   font-size: 15px;
@@ -35,10 +28,10 @@ a{
 }
 
 
-
+/* 
 .elementor-heading-title.elementor-size-default :hover{
   opacity: 0.99;
-}
+} */
 .elementor-button-content-wrapper :hover{
   opacity: 0.5;
 }
