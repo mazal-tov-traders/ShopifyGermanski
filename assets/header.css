@@ -30,19 +30,18 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__navigation {
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
-
+  overflow-y:auto;
   height: 66rem;
 }
 .menu-drawer__img-button-wrapper {
   display: flex;
   justify-content: space-between;
   padding: 22px 0px 10px 0px;
-  margin-top: 4%;
+  margin-top: 5%;
 }
 .menu-drawer__img {
-  width: 165px;
-
-  margin-left: 6px;
+  width: 159px;
+  margin-left: 5px;
 }
 .menu-drawer__menu-item {
   padding: 1.1rem 2.2rem;
@@ -66,7 +65,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawe-list_wrapper .header__menu-item.list-menu__item.link.focus-inset {
-  padding-left: 15px;
+  /* padding-left: 15px; */
 }
 .menu-drawe-list_wrapper .header__menu-item span {
   padding-right: 25px;
@@ -111,12 +110,12 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 .menu-drawe-list_wrapper
   .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large {
-  padding-left: 38px;
+  /* padding-left: 38px; */
 }
 
 .menu-drawe-list_wrapper
   .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   font-family: "Jost", Sans-serif;
   color: #707070;
@@ -125,8 +124,36 @@ details[open].menu-opening > .menu-drawer__submenu {
   .header__menu-item.list-menu__item.link.link--text.focus-inset.caption-large:hover {
   color: #000;
 }
+.menu-drawe-list_wrapper
+    .header__submenu .header__menu-item {
+    /* padding: 0.5rem 2.4rem; */
+}
+.menu-drawe-list_wrapper
+    .menu__cart-product_image-hover-wrapper {
+    top:83%;
+}
+.menu-drawe-list_wrapper
+    .menu__cart-product__wrapper:hover .menu__cart-product_image-hover-wrapper {
+    top: 71%;
+}
+#HeaderMenu-MenuList-2
+    .header__menu-item.link.link--text.list-menu__item.focus-inset.caption-large span{
+ display: none;
+}
+.header__menu-item.list-menu__item.link.focus-inset.menu-drawe-links span{
+    padding-left: 20px;
+
+}
+
+    .header__menu-item.link.link--text.list-menu__item.focus-inset.caption-large span{
+        padding-left: 20px;
+    }
 /*                             end drawer                               */
 /*                           !!!!!!!!!!                                */
+#MegaMenu-Content-2 
+    .mega-menu__link.mega-menu__link--level-2.link{
+display: none;
+}
 .alireviews-review-star-rating .alr-wh-star-rating,
 .alr-display-review-badge .alr-wh-star-rating {
   padding: 0px;
