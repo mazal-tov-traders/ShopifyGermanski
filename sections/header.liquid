@@ -271,15 +271,34 @@
                                   {%- for childlink in link.links -%}
                                     <li>
                                       {%- if childlink.links == blank -%}
+                                        {% if link.title != "OFFERS"%} 
                                         <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                          
+                                        {{ childlink.title}}
+                                       {%- if childlink.title == "Before & After"-%}
+                                        <div class='menu-drawe__image'>                                
+                                                <img class="menu-drawer__img-link" src="https://dermaflage.com/wp-content/uploads/2021/11/1-2.png" alt="">
+                                             </div>
+                                       {% endif%}
+                                       {%- if childlink.title == "Customer Reviews"-%}
+                                        <div class='menu-drawe__image'>                                
+                                                <img class="menu-drawer__img-link" src="https://dermaflage.com/wp-content/uploads/2021/11/markus-winkler-fRAIQHKcc0-unsplash.jpg" alt="">
+                                             </div>
+                                       {% endif%}
+                                       {%- if childlink.title == "Scar Treatment Tips"-%}
+                                        <div class='menu-drawe__image'>                                
+                                                <img class="menu-drawer__img-link" src="https://dermaflage.com/wp-content/uploads/2021/11/home-5-img-3-2-1.jpg" alt="">
+                                             </div>
+                                       {% endif%}
+                                        </a>
+                                          {% comment %} start блок карточки товара  {% endcomment %}
+                                          {% else%}
                                           {% for block in section.blocks %}  
                                           {% case block.type %}
                                            
                                           {% when 'product' %}
                                            {% assign product = block.settings.product%}
                                            <div class="menu__cart-product__wrapper">
-                                             {% comment %} <div>{% if product.price < product.compare_at_price %}{% endif %}</div> {% endcomment %}
+                                            
                                              <div class='menu__cart-product__image'>                                
                                                <img src="{{product.featured_image | image_url: width: 300}}" alt="" class='menu__cart-product__picture' loading='lazy' >
                                              </div>
@@ -385,7 +404,10 @@
                                            </div>
                                          {% endcase %}
                                        {% endfor %}
-                                        </a>
+                                      
+                                       {% comment %} end блок карточки товара  {% endcomment %}
+                                        
+                                      {% endif%}
                                       {%- else -%}
                                         <div id="Details-HeaderSubMenu-{{ forloop.index }}" open>
                                           <summary class="header__menu-item link link--text list-menu__item focus-inset caption-large">
@@ -619,6 +641,22 @@
                             <li>
                               <a href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %} >
                                 {{ childlink.title | escape }}
+                                
+                                {%- if childlink.title == "Before & After"-%}
+                                  <div class='menu-drawe__image'>                                
+                                          <img class="menu-drawer__img-link" src="https://dermaflage.com/wp-content/uploads/2021/11/1-2.png" alt="">
+                                       </div>
+                                 {% endif%}
+                                 {%- if childlink.title == "Customer Reviews"-%}
+                                  <div class='menu-drawe__image'>                                
+                                          <img class="menu-drawer__img-link" src="https://dermaflage.com/wp-content/uploads/2021/11/markus-winkler-fRAIQHKcc0-unsplash.jpg" alt="">
+                                       </div>
+                                 {% endif%}
+                                 {%- if childlink.title == "Scar Treatment Tips"-%}
+                                  <div class='menu-drawe__image'>                                
+                                          <img class="menu-drawer__img-link" src="https://dermaflage.com/wp-content/uploads/2021/11/home-5-img-3-2-1.jpg" alt="">
+                                       </div>
+                                 {% endif%}
                               </a>
                               {%- if childlink.links != blank -%}
                                 <ul class="list-unstyled" role="list">
