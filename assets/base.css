@@ -4,6 +4,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Jost:ital,wght@0,400;0,500;1,500&family=Montserrat:ital,wght@0,700;1,500&display=swap');
 
 
+
+
+
+.header--middle-left {
+  grid-template-areas: 'heading navigation icons';
+  
+  column-gap: 7rem;
+}
+.header--middle-left {
+  grid-template-areas: 'heading navigation icons';
+  column-gap: 0rem;
+}
 a{
   text-decoration: none;
   color: #000;
@@ -2377,7 +2389,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .header {
   display: grid;
-  grid-template-areas: 'left-icons heading icons';
+  /* grid-template-areas: 'left-icons heading icons'; */
   grid-template-columns: 1fr 1.5fr 0.3fr;
   align-items: center;
 }
@@ -2401,19 +2413,15 @@ product-info .loading-overlay:not(.hidden) ~ *,
     grid-template-columns: 1fr auto;
   }
 
-  .header--top-left.drawer-menu,
+  /* .header--top-left.drawer-menu,
   .header--middle-left.drawer-menu {
     grid-template-areas:
       'navigation heading icons';
     grid-template-columns: auto 1fr auto;
     column-gap: 7rem;
-  }
+  } */
 
-  .header--middle-left {
-    grid-template-areas: 'heading navigation icons';
-    
-    column-gap: 7rem;
-  }
+  
 
   .header--middle-center:not(.drawer-menu) {
     grid-template-areas: 'navigation heading icons';
