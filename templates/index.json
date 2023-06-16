@@ -61,27 +61,6 @@
       "settings": {
       }
     },
-    "b309dd9a-2fc8-45d6-bce8-f366f0dcc1a1": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h0",
-        "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=KLr3m4POEr0",
-        "cover_image": "shopify:\/\/shop_images\/the-doctors-dermaflage-scaled.webp",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-2",
-        "padding_top": 52,
-        "padding_bottom": 36
-      }
-    },
-    "ffa895b1-b900-49f9-816a-b03d3c5aff8d": {
-      "type": "test",
-      "settings": {
-        "get_img_test": "shopify:\/\/shop_images\/dflogo-w-guarantee.webp"
-      }
-    },
     "226640c7-4eba-4dba-a5f7-4af3d0cc3224": {
       "type": "section-slider-products",
       "blocks": {
@@ -124,13 +103,34 @@
         "show_rating": false,
         "slider_items": 3
       }
+    },
+    "b309dd9a-2fc8-45d6-bce8-f366f0dcc1a1": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h0",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=KLr3m4POEr0",
+        "cover_image": "shopify:\/\/shop_images\/the-doctors-dermaflage-scaled.webp",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-2",
+        "padding_top": 52,
+        "padding_bottom": 36
+      }
+    },
+    "ffa895b1-b900-49f9-816a-b03d3c5aff8d": {
+      "type": "test",
+      "settings": {
+        "get_img_test": "shopify:\/\/shop_images\/dflogo-w-guarantee.webp"
+      }
     }
   },
   "order": [
     "image_banner",
     "fa1bc045-62ff-45e7-a2af-c10f774f3e7b",
+    "226640c7-4eba-4dba-a5f7-4af3d0cc3224",
     "b309dd9a-2fc8-45d6-bce8-f366f0dcc1a1",
-    "ffa895b1-b900-49f9-816a-b03d3c5aff8d",
-    "226640c7-4eba-4dba-a5f7-4af3d0cc3224"
+    "ffa895b1-b900-49f9-816a-b03d3c5aff8d"
   ]
 }
