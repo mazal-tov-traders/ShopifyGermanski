@@ -61,6 +61,11 @@
       "settings": {
       }
     },
+    "66a8513c-f426-4b5b-88ad-3cc2c0e3a891": {
+      "type": "description-banner",
+      "settings": {
+      }
+    },
     "226640c7-4eba-4dba-a5f7-4af3d0cc3224": {
       "type": "section-slider-products",
       "blocks": {
@@ -129,6 +134,7 @@
   "order": [
     "image_banner",
     "fa1bc045-62ff-45e7-a2af-c10f774f3e7b",
+    "66a8513c-f426-4b5b-88ad-3cc2c0e3a891",
     "226640c7-4eba-4dba-a5f7-4af3d0cc3224",
     "b309dd9a-2fc8-45d6-bce8-f366f0dcc1a1",
     "ffa895b1-b900-49f9-816a-b03d3c5aff8d"
