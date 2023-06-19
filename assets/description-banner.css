@@ -80,8 +80,12 @@
 .description-banner__banner {
     width: 50%;
 }
-.description-banner__banner img{
-    max-width: 570px;
+.description-banner__img{
+    /* max-height: 670px; */
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+    
 }
 .description-banner__description-button:hover {
 background-color: black;
@@ -90,4 +94,39 @@ color: #fff;
 }
 .description-banner__description-button:hover a{
     color: #fff;
+}
+
+@media (max-width: 750px){
+.description-banner__wraper {
+    
+    flex-direction: column;
+}
+.description-banner__description {
+    width: 100%;
+    
+}
+.description-banner__banner {
+    
+    width: 100%;
+    max-width: 750px;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+    
+  
+    
+}
+.description-banner__img{
+    width: 100%;
+  height: 94vw;
+  object-fit: cover;
+}
+}
+
+@media (max-width: 400px){
+    .description-banner__img{
+       
+      height: 100vw; 
+      display: none;
+    }
 }

@@ -539,3 +539,12 @@ font-size: 22px;
   }
 }
 
+@media (max-width: 450px) {
+  .header__icon, .header__icon--cart .icon {
+    
+    width: 3.4rem;
+  }
+  .header .header__icons{
+margin-left: 6px;
+  }
+}
