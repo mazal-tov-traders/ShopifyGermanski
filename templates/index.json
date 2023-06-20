@@ -73,15 +73,25 @@
     },
     "63c9314e-e0ba-4450-81b2-17122da7d8d7": {
       "type": "video-and-product",
+      "blocks": {
+        "49e688e6-6c97-4e1b-b6de-175eda44ff63": {
+          "type": "product",
+          "settings": {
+            "product": "scar-wrinkle-filler"
+          }
+        },
+        "413dbc04-8af0-4559-9609-c43b6cad4968": {
+          "type": "product",
+          "settings": {
+            "product": "mineral-powder-foundation"
+          }
+        }
+      },
+      "block_order": [
+        "49e688e6-6c97-4e1b-b6de-175eda44ff63",
+        "413dbc04-8af0-4559-9609-c43b6cad4968"
+      ],
       "settings": {
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=YvYmNwpqkSg&ab_channel=Dermaflage",
-        "cover_image": "shopify:\/\/shop_images\/before-and-after-dermaflage.webp",
-        "description": "",
-        "full_width": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "226640c7-4eba-4dba-a5f7-4af3d0cc3224": {
