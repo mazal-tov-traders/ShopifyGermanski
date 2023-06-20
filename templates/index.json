@@ -71,6 +71,19 @@
       "settings": {
       }
     },
+    "63c9314e-e0ba-4450-81b2-17122da7d8d7": {
+      "type": "video-and-product",
+      "settings": {
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=YvYmNwpqkSg&ab_channel=Dermaflage",
+        "cover_image": "shopify:\/\/shop_images\/before-and-after-dermaflage.webp",
+        "description": "",
+        "full_width": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "226640c7-4eba-4dba-a5f7-4af3d0cc3224": {
       "type": "section-slider-products",
       "blocks": {
@@ -141,6 +154,7 @@
     "fa1bc045-62ff-45e7-a2af-c10f774f3e7b",
     "66a8513c-f426-4b5b-88ad-3cc2c0e3a891",
     "08fe50af-e888-405d-bcff-62ef531c53d1",
+    "63c9314e-e0ba-4450-81b2-17122da7d8d7",
     "226640c7-4eba-4dba-a5f7-4af3d0cc3224",
     "b309dd9a-2fc8-45d6-bce8-f366f0dcc1a1",
     "ffa895b1-b900-49f9-816a-b03d3c5aff8d"

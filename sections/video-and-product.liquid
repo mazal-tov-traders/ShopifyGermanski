@@ -1,0 +1,103 @@
+{{ 'video-and-product.css' | asset_url | stylesheet_tag }}
+
+<section class="video-and-product">
+  <div class="video-and-product__wrapper">
+    <div class="video-and-product__video">
+      <div class="video-and-product__wraper-img">
+        <img
+          class="video-and-product__img"
+          src="https://dermaflage.com/wp-content/uploads/2021/06/before-and-after-dermaflage.webp"
+          alt=""
+        >
+        <button class="video-and-product__button" id="play-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:svgjs="http://svgjs.com/svgjs"
+            width="50"
+            height="50"
+            x="0"
+            y="0"
+            viewBox="0 0 24 24"
+            style="enable-background: new 0 0 512 512"
+            xml:space="preserve"
+            class=""
+          >
+            <g>
+              <path
+                d="M13.96 12 10 14.228V9.773l3.96 2.228ZM24 12c0 6.617-5.383 12-12 12S0 18.617 0 12 5.383 0 12 0s12 5.383 12 12Zm-5.96 0L8 6.353v11.295l10.04-5.647Z"
+                fill="#000000"
+                data-original="#000000"
+                class=""
+              ></path>
+            </g>
+          </svg>
+        </button>
+      </div>
+
+      <div id="video-overlay" class="video-overlay" style="display: none">
+        <div class="video-container">
+          <iframe
+            class="video-js-vimeo"
+            width="1700"
+            height="960"
+            src="https://www.youtube.com/embed/YvYmNwpqkSg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <span id="close-button" class="video-close">&times;</span>
+        </div>
+      </div>
+    </div>
+    <div class="video-and-product__product"></div>
+  </div>
+</section>
+
+<script>
+  const playButton = document.getElementById('play-button');
+  const closeButton = document.getElementById('close-button');
+  const videoOverlay = document.getElementById('video-overlay');
+  const video = document.querySelector('.video-js-vimeo');
+
+  playButton.addEventListener('click', () => {
+    videoOverlay.style.display = 'flex';
+    video.src = 'https://www.youtube.com/embed/YvYmNwpqkSg';
+  });
+
+  closeButton.addEventListener('click', () => {
+    videoOverlay.style.display = 'none';
+    video.src = '';
+  });
+</script>
+
+{% schema %}
+{
+  "name": "video-and-product",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "video",
+      "id": "video",
+      "label": "t:sections.video.settings.video.label"
+    },
+    { "type": "paragraph", "content": "t:sections.video.settings.paragraph.content" },
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "accept": ["youtube", "vimeo"],
+      "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+      "label": "t:sections.video.settings.video_url.label",
+      "info": "t:sections.video.settings.video_url.info"
+    },
+    { "type": "image_picker", "id": "cover_image", "label": "t:sections.video.settings.cover_image.label" }
+  ],
+  "presets": [{ "name": "video-and-product" }]
+}
+{% endschema %}
