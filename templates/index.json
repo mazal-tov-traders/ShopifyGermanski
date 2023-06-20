@@ -137,6 +137,11 @@
         "slider_items": 3
       }
     },
+    "3cb9b1f7-c818-4412-b206-3359255f37d8": {
+      "type": "benefit-offer",
+      "settings": {
+      }
+    },
     "b309dd9a-2fc8-45d6-bce8-f366f0dcc1a1": {
       "type": "video",
       "settings": {
@@ -166,6 +171,7 @@
     "08fe50af-e888-405d-bcff-62ef531c53d1",
     "63c9314e-e0ba-4450-81b2-17122da7d8d7",
     "226640c7-4eba-4dba-a5f7-4af3d0cc3224",
+    "3cb9b1f7-c818-4412-b206-3359255f37d8",
     "b309dd9a-2fc8-45d6-bce8-f366f0dcc1a1",
     "ffa895b1-b900-49f9-816a-b03d3c5aff8d"
   ]
