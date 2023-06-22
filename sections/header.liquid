@@ -1000,6 +1000,13 @@
           endif
         -%}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+        <div>
+          {% for discount_application in cart.cart_level_discount_applications %}
+            Discount name: {{ discount_application.title }}
+            Savings: -{{ discount_application.total_allocated_amount | money }}
+          {% endfor %}
+        </div>
+
         {%- if cart != empty -%}
           <div class="cart-count-bubble">
             {%- if cart.item_count < 100 -%}
@@ -1237,6 +1244,7 @@
       "default": "main-menu",
       "label": "t:sections.header.settings.menu.label"
     },
+    
     {
       "type": "select",
       "id": "menu_type_desktop",
