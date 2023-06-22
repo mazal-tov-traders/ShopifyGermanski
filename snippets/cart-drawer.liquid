@@ -43,8 +43,13 @@
                   </div>
                   <div class="cart-drawer-item-main-flex-right">
                     <span>{{ item.final_line_price | money }}</span>
-                    <span>{{ item.product.compare_at_price | money }}</span>
                   </div>
+                  
+                  {% if item.product.compare_at_price and item.product.compare_at_price > 0 %}
+                    <span>{{ item.quantity | times: item.product.compare_at_price | money }}</span>
+                  {% endif %}
+
+
                 </div>
               </div>
             </div>
@@ -52,20 +57,25 @@
         </div>
 
         <footer class="cart-drawer-footer">
-          {% if cart.total_discounts > 0 %}
-            <div class="cart-drawer-footer-row">
-              <h3>Discounts</h3>
-              <span>{{ cart.total_discounts | money }}</span>
+ 
+            <div>
+              {% assign subtotalNoDiscount = 0 %}
+              {% for item in cart.items %}
+                {% assign linePrice = item.quantity | times: item.product.compare_at_price %}
+                {% assign subtotalNoDiscount = subtotalNoDiscount | plus: linePrice %}
+              {% endfor %}
+              {{ subtotalNoDiscount | money }}
             </div>
-          {% endif %}
-          <div class="cart-drawer-footer-row">
-            <h3>Subtotal</h3>
-            <span>{{ cart.total_price | money }}</span>
-          </div>
-          <button type="submit" name="checkout" class="cart-drawer-button">Checkout</button>
+
+            <div class="cart-drawer-footer-row">
+              <h3>Subtotal</h3>
+              <span>{{ cart.total_price | money }}</span>
+            </div>
+            <button type="submit" name="checkout" class="cart-drawer-button">Checkout</button>
         </footer>
       {% endif %}
     {% endform %}
   </div>
 </div>
+
 
