@@ -1,27 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&display=swap");
 
-
-
-.drawer-wrapper-style
-.drawer__inner {
+.drawer-wrapper-style .drawer__inner {
   height: 537px;
   width: 750px;
   padding: 20px 30px;
-  border: 1px solid #AED1EA;
+  border: 1px solid #aed1ea;
 }
-.drawer-wrapper-style
-.drawer__header {
+.drawer-wrapper-style .drawer__header {
   position: relative;
   background-color: rgb(var(--color-background));
-  padding: 1.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 690px;
-  width: 100%;
+  width: 690px;
+  
 }
-.drawer-wrapper-style
-.drawer__header::after {
+.drawer-wrapper-style .drawer__header::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -29,8 +23,159 @@
   transform: translateX(-50%);
   width: 690px;
   height: 1px;
-  background-color: #AED1EA;
+  background-color: #aed1ea;
 }
+.drawer-wrapper-style .drawer__header-wrapper-title {
+  display: flex;
+  width: 284px;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.drawer-wrapper-style .drawer__heading{
+  color: #363636;
+    flex: 1;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.drawer-wrapper-style .cart-count{
+  font-weight: 400;
+  color: #878787;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.drawer-wrapper-style .cart-item{
+  width: 690px;
+  height: 74px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drawer-wrapper-style .cart-drawer-items {
+  
+  flex: 1;
+  overflow: scroll;
+}
+.drawer-wrapper-style .cart-item__image{
+width: 99px;
+height: 74px;
+object-fit: cover;
+}
+.drawer-wrapper-style .drawer__close {
+  display: inline-block;
+  padding: 0;
+  min-width: 4.4rem;
+  min-height: 4.4rem;
+  box-shadow: 0 0 0 0.2rem rgba(var(--color-button), 0);
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  color: rgb(var(--color-foreground));
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.drawer-wrapper-style .drawer__header {
+  position: relative;
+  background-color: rgb(var(--color-background));
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawer-wrapper-style .cart-item__media {
+  width: 99px;
+height: 74px;
+}
+
+.drawer-wrapper-style .cart-item__details{
+  width: 245px;
+  height: 54px;
+}
+
+.drawer-wrapper-style .cart-item__name.h4.break{
+  font-weight: 500;
+  color: #363636;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 27px;
+}
+.drawer-wrapper-style .cart-item__totals.right{
+  width: 82px;
+  height: 63px;
+}
+
+.drawer-wrapper-style .cart-item__quantity{
+ display: flex;
+}
+
+.drawer-wrapper-style .button-remove {
+width: 24px;
+height: 24px;
+}
+.drawer-wrapper-style .button.button--tertiary{
+width: 24px;
+height: 24px;
+min-width: calc(1rem + var(--buttons-border-width) * 1);
+min-height: calc(1rem + var(--buttons-border-width) * 1);
+padding: 0;
+border: none;
+font: inherit;
+color: inherit;
+background-color: transparent;
+}
+.drawer-wrapper-style .button.button--tertiary:focus {
+  outline: none;
+}
+.drawer-wrapper-style .quantity__input{
+  font-weight: 500;
+  color: #363636;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 24px;
+  width: 40px;
+  height: 40px;
+  
+ border: 1px solid #AED1EA;
+ border-radius: 3px;
+  align-items: center;
+ 
+}
+.drawer-wrapper-style .quantity__button.no-js-hidden.plus{
+  font-weight: 500;
+  color: #2B75BB;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 36px;
+  align-items: center;
+  width: 15px;
+  height: 40px;
+ 
+  
+}
+.drawer-wrapper-style .quantity__button.no-js-hidden.minus{
+  font-weight: 500;
+  color: #727272;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 36px;
+  align-items: center;
+  width: 15px;
+  height: 40px;
+  
+}
+.drawer-wrapper-style .quantity.cart-quantity{
+  width: 94px;
+  height: 40px;
+}
+
+
 
 /* .cart-drawer {
     position: fixed;
