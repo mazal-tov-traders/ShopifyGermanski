@@ -1,6 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&display=swap');
 
-.cart-drawer {
+
+
+.drawer-wrapper-style
+.drawer__inner {
+  height: 537px;
+  width: 750px;
+  padding: 20px 30px;
+  border: 1px solid #AED1EA;
+}
+.drawer-wrapper-style
+.drawer__header {
+  position: relative;
+  background-color: rgb(var(--color-background));
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 690px;
+  width: 100%;
+}
+.drawer-wrapper-style
+.drawer__header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 690px;
+  height: 1px;
+  background-color: #AED1EA;
+}
+
+/* .cart-drawer {
     position: fixed;
     top: 0;
     left: -9999px;
@@ -267,4 +299,4 @@ button {
   font: inherit;
   color: inherit;
   background-color: transparent;
-}
+} */
