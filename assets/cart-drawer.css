@@ -169,7 +169,10 @@
 .drawer-wrapper-style .quantity.cart-quantity {
   width: 94px;
   height: 40px;
+  display: flex;
+  justify-content: space-between;
 }
+
 
 .drawer-wrapper-style .cart-item__totals.right {
   width: 112px;

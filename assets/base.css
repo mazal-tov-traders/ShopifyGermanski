@@ -63,6 +63,7 @@ a{
 }
 .header__icons .header__menu-item.link-blog{
   padding: 0;
+  display: none;
 }
 
 .header__icons-message :hover {
@@ -2390,7 +2391,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header {
   display: grid;
   /* grid-template-areas: 'left-icons heading icons'; */
-  grid-template-columns: 1fr 1.5fr 0.3fr;
+  /* grid-template-columns: 1fr 1.5fr 0.3fr; */
+  grid-template-columns: 0fr 1.5fr 3.3fr;
   align-items: center;
 }
 
@@ -2539,11 +2541,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 /* Header icons */
 .header__icons {
-  display: flex;
-  grid-area: icons;
-  /* justify-self: end; */
-  align-items: center;
-/*   max-width: 200px; */
+   display: flex; 
+  
   width: 100%;
 }
 
@@ -2557,7 +2556,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header__icon span {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  width: 297px;
 }
 
 .header__icon {
