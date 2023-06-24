@@ -166,10 +166,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   background-color: rgb(var(--color-base-background-1));
 } */
 
-cart-drawer-items {
-  overflow: auto;
-  flex: 1;
-}
+
 
 /* @media screen and (max-height: 650px) {
   cart-drawer-items {

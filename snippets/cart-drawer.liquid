@@ -116,7 +116,7 @@
                     </thead>  {% endcomment %}
                     
   
-                    <tbody role="rowgroup">
+                    <tbody class="cart-product-wrapper" role="rowgroup">
                       {%- for item in cart.items -%}
                         
                         <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row">
@@ -226,65 +226,8 @@
                               {%- endfor -%}
                             </ul> {% endcomment %}
                           </td>
-  
-                          <td class="cart-item__totals right" role="cell" headers="CartDrawer-ColumnTotal">
-                            <div class="loading-overlay hidden">
-                              <div class="loading-overlay__spinner">
-                                <svg
-                                  aria-hidden="true"
-                                  focusable="false"
-                                  class="spinner"
-                                  viewBox="0 0 66 66"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                                </svg>
-                              </div>
-                            </div>
-  
-                            <div class="cart-item__price-wrapper">
-                              {% if item.product.compare_at_price and item.product.compare_at_price > 0 %}
-                                <span class="cart-item__compare-at-price">{{ item.quantity | times: item.product.compare_at_price | money }}</span>
-                              {% endif %}
 
-                              {%- if item.original_line_price != item.final_line_price -%}
-                                <div class="cart-item__discounted-prices">
-                                  <span class="visually-hidden">
-                                    {{ 'products.product.price.regular_price' | t }}
-                                  </span>
-                                  <s class="cart-item__old-price price price--end">
-                                    {{ item.original_line_price | money }}
-                                  </s>
-                                  <span class="visually-hidden">
-                                    {{ 'products.product.price.sale_price' | t }}
-                                  </span>
-                                  <span class="price price--end">
-                                    {{ item.final_line_price | money }}
-                                  </span>
-                                </div>
-                              {%- else -%}
-                                <span class="price price--end">
-                                  {{ item.original_line_price | money }}
-                                </span>
-                              {%- endif -%} 
-  
-                              {%- if item.variant.available and item.unit_price_measurement -%}
-                                <div class="unit-price caption">
-                                  <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-                                  {{ item.variant.unit_price | money }}
-                                  <span aria-hidden="true">/</span>
-                                  <span class="visually-hidden"
-                                    >&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span
-                                  >
-                                  {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
-                                    {{- item.variant.unit_price_measurement.reference_value -}}
-                                  {%- endif -%}
-                                  {{ item.variant.unit_price_measurement.reference_unit }}
-                                </div>
-                              {%- endif -%}
-                            </div>
-                          </td>
-  
+
                           <td class="cart-item__quantity" role="cell" headers="CartDrawer-ColumnQuantity">
                             <div class="cart-item__quantity-wrapper">
                               <quantity-input class="quantity cart-quantity">
@@ -319,27 +262,9 @@
                                   +
                                 </button>
                               </quantity-input>
-  
                              
                             </div>
 
-
-                            <cart-remove-button class="button-remove"
-                              id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
-                              data-index="{{ item.index | plus: 1 }}"
-                            >
-                              <button
-                                type="button"
-                                class="button button--tertiary"
-                                aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
-                              >
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M12.5 0.6875C5.98648 0.6875 0.6875 5.98648 0.6875 12.5C0.6875 19.0135 5.98648 24.3125 12.5 24.3125C19.0135 24.3125 24.3125 19.0135 24.3125 12.5C24.3125 5.98648 19.0135 0.6875 12.5 0.6875ZM12.5 22.625C6.91716 22.625 2.375 18.0833 2.375 12.5C2.375 6.91675 6.91716 2.375 12.5 2.375C18.0828 2.375 22.625 6.91675 22.625 12.5C22.625 18.0833 18.0828 22.625 12.5 22.625ZM17.3223 16.0134C17.6564 16.3381 17.6638 16.8728 17.3388 17.2065C17.1736 17.3763 16.9536 17.462 16.734 17.462C16.5218 17.462 16.3096 17.3829 16.1457 17.223L12.512 13.6887L8.94949 17.2947C8.78429 17.4612 8.56676 17.5452 8.34923 17.5452C8.13499 17.5452 7.92076 17.4644 7.75638 17.3013C7.42473 16.9742 7.42143 16.4402 7.74896 16.1082L11.302 12.5118L7.67769 8.98657C7.34357 8.66193 7.33615 8.12717 7.66121 7.79346C7.98586 7.45892 8.52061 7.45151 8.85432 7.77698L12.488 11.3113L16.0505 7.70529C16.3784 7.37488 16.9124 7.36993 17.2436 7.6987C17.5753 8.02582 17.5786 8.55975 17.251 8.89182L13.698 12.4882L17.3223 16.0134Z" fill="#878787"/>
-                                  </svg>
-                              </button>
-                            </cart-remove-button>
-
-  
                             <div
                               id="CartDrawer-LineItemError-{{ item.index | plus: 1 }}"
                               class="cart-item__error"
@@ -359,6 +284,88 @@
                               </svg>
                             </div>
                           </td>
+  
+                          <td class="cart-item__totals right" role="cell" headers="CartDrawer-ColumnTotal">
+                            <div class="loading-overlay hidden">
+                              <div class="loading-overlay__spinner">
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  class="spinner"
+                                  viewBox="0 0 66 66"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                </svg>
+                              </div>
+                            </div>
+  
+                            <div class="cart-item__price-wrapper">
+                              {% if item.product.compare_at_price and item.product.compare_at_price > 0 %}
+                                <span class="cart-item__compare-at-price">{{ item.quantity | times: item.product.compare_at_price | money }}</span>
+                              {% endif %}
+
+                              {%- if item.original_line_price != item.final_line_price -%}
+                                <div class="cart-item__discounted-prices">
+                                  <span class="visually-hidden">
+                                    {{ 'products.product.price.regular_price' | t }}
+                                  </span>
+                                  <s class="cart-item__old-price price price--end price">
+                                    {{ item.original_line_price | money }}
+                                  </s>
+                                  <span class="visually-hidden">
+                                    {{ 'products.product.price.sale_price' | t }}
+                                  </span>
+                                  <span class="price price--end">
+                                    {{ item.final_line_price | money }}
+                                  </span>
+                                </div>
+                              {%- else -%}
+                                <span class="price price--end">
+                                  {{ item.original_line_price | money }}
+                                </span>
+                              {%- endif -%} 
+  
+                              {%- if item.variant.available and item.unit_price_measurement -%}
+                                <div class="unit-price caption">
+                                  <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
+                                  {{ item.variant.unit_price | money }}
+                                  <span aria-hidden="true">/</span>
+                                  <span class="visually-hidden"
+                                    >&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span
+                                  >
+                                  {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
+                                    {{- item.variant.unit_price_measurement.reference_value -}}
+                                  {%- endif -%}
+                                  {{ item.variant.unit_price_measurement.reference_unit }}
+                                </div>
+                              {%- endif -%}
+                            </div>
+                          </td>
+  
+                          
+
+                          <td class="cart-item__quantity_button-remove" role="cell" headers="CartDrawer-ColumnQuantity__button-remove">
+
+                            <cart-remove-button class="button-remove"
+                              id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
+                              data-index="{{ item.index | plus: 1 }}"
+                            >
+                              <button
+                                type="button"
+                                class="button button--tertiary"
+                                aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
+                              >
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.5 0.6875C5.98648 0.6875 0.6875 5.98648 0.6875 12.5C0.6875 19.0135 5.98648 24.3125 12.5 24.3125C19.0135 24.3125 24.3125 19.0135 24.3125 12.5C24.3125 5.98648 19.0135 0.6875 12.5 0.6875ZM12.5 22.625C6.91716 22.625 2.375 18.0833 2.375 12.5C2.375 6.91675 6.91716 2.375 12.5 2.375C18.0828 2.375 22.625 6.91675 22.625 12.5C22.625 18.0833 18.0828 22.625 12.5 22.625ZM17.3223 16.0134C17.6564 16.3381 17.6638 16.8728 17.3388 17.2065C17.1736 17.3763 16.9536 17.462 16.734 17.462C16.5218 17.462 16.3096 17.3829 16.1457 17.223L12.512 13.6887L8.94949 17.2947C8.78429 17.4612 8.56676 17.5452 8.34923 17.5452C8.13499 17.5452 7.92076 17.4644 7.75638 17.3013C7.42473 16.9742 7.42143 16.4402 7.74896 16.1082L11.302 12.5118L7.67769 8.98657C7.34357 8.66193 7.33615 8.12717 7.66121 7.79346C7.98586 7.45892 8.52061 7.45151 8.85432 7.77698L12.488 11.3113L16.0505 7.70529C16.3784 7.37488 16.9124 7.36993 17.2436 7.6987C17.5753 8.02582 17.5786 8.55975 17.251 8.89182L13.698 12.4882L17.3223 16.0134Z" fill="#878787"/>
+                                  </svg>
+                              </button>
+                            </cart-remove-button>
+
+                          </td>
+
+
+
                         </tr>
                       {%- endfor -%}
                     </tbody>
@@ -410,8 +417,8 @@
 
 
             <div class="totals" role="status">
-              <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
-              <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+              <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}:</h2>
+              <p class="totals__subtotal-value">{{ cart.total_price | money }}</p>
             </div>
   
             <div>
@@ -430,7 +437,7 @@
   
            
   
-            <small class="tax-note caption-large rte">
+            {% comment %} <small class="tax-note caption-large rte">
               {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
                 {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
               {%- elsif cart.taxes_included -%}
@@ -440,9 +447,15 @@
               {%- else -%}
                 {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
               {%- endif -%}
-            </small>
+            </small> {% endcomment %}
           </div>
-  
+
+
+          <div>
+            <a href="">
+              Continue Shopping
+            </a>
+          </div>
           <!-- CTAs -->
   
           <div class="cart__ctas" {{ block.shopify_attributes }}>
@@ -490,7 +503,14 @@
         document.querySelector('#cart').submit();
       });
     });
+
+
+  
   </script>
+
+
+
+
   
   
   
