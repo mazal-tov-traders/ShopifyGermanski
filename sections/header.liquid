@@ -451,7 +451,87 @@
       </header-drawer>
     {%- endif -%}
 
-    {%- if section.settings.logo_position == 'top-center' or section.settings.menu == blank -%}
+   
+       {% comment %} my serch  {% endcomment %}
+       <div class="template-search__search">
+        {%- if settings.predictive_search_enabled -%}
+          <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
+        {%- endif -%}
+            <main-search>
+              <form action="{{ routes.search_url }}" method="get" role="search" class="search">
+                <div class="field">
+                  <input
+                    class="search__input field__input"
+                    id="Search-In-Template"
+                    type="search"
+                    name="q"
+                    value="{{ search.terms | escape }}"
+                    placeholder="{{ 'general.search.search' | t }}"
+                    {%- if settings.predictive_search_enabled -%}
+                      role="combobox"
+                      aria-expanded="false"
+                      aria-owns="predictive-search-results"
+                      aria-controls="predictive-search-results"
+                      aria-haspopup="listbox"
+                      aria-autocomplete="list"
+                      autocorrect="off"
+                      autocomplete="off"
+                      autocapitalize="off"
+                      spellcheck="false"
+                    {%- endif -%}
+                  >
+                  <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
+                  <input name="options[prefix]" type="hidden" value="last">
+
+                  {%- if settings.predictive_search_enabled -%}
+                    <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
+                      <div class="predictive-search__loading-state">
+                        <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+                  {%- endif -%}
+
+                  <button type="reset" class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}" aria-label="{{ 'general.search.reset' | t }}">
+                    <svg class="icon icon-close" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-reset">
+                    </svg>
+                  </button>
+                  <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                    <svg class="icon icon-search" aria-hidden="true" focusable="false">
+                      <use xlink:href="#icon-search">
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </main-search>
+        {%- if settings.predictive_search_enabled -%}
+          </predictive-search>
+        {%- endif -%}
+
+      </div>
+
+      {%- if search.performed -%}
+        {%- unless section.settings.enable_filtering or section.settings.enable_sorting -%}
+          {%- if search.results_count > 0 -%}
+            <p role="status">{{ 'templates.search.results_with_count_and_term' | t: terms: search.terms, count: search.results_count }}</p>
+          {%- endif -%}
+        {%- endunless -%}
+        {%- if search.results_count == 0 and search.filters == empty -%}
+          <p role="status">{{ 'templates.search.no_results' | t: terms: search.terms }}</p>
+        {%- endif -%}
+      {%- endif -%}
+       
+{% comment %} serch {% endcomment %}
+
+
+      
+     
+
+    {% comment %} {%- if section.settings.logo_position == 'top-center' or section.settings.menu == blank -%}
       <details-modal class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
@@ -471,7 +551,9 @@
                 <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
               {%- else -%}
                 <search-form class="search-modal__form">
+                  
               {%- endif -%}
+              
                   <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
                     <div class="field">
                       <input class="search__input field__input"
@@ -519,6 +601,9 @@
                       <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
                     {%- endif -%}
                   </form>
+
+
+
               {%- if settings.predictive_search_enabled -%}
                 </predictive-search>
               {%- else -%}
@@ -533,7 +618,7 @@
           </div>
         </details>
       </details-modal>
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
 
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
@@ -887,7 +972,7 @@
           </localization-form>
         {%- endif -%}
       </div>
-      <details-modal class="header__search">
+      {% comment %} <details-modal class="header__search"> 
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
@@ -967,7 +1052,7 @@
             </div>
           </div>
         </details>
-      </details-modal>
+      </details-modal>  {% endcomment %}
 
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
@@ -1016,10 +1101,14 @@
           </div>
         {%- endif -%}
         {% comment %}  здесь будет кол и общая цена {% endcomment %}
-        <div class="cart-count">
-          <span>My cart</span>
-          {{ cart.item_count }} item(s) {{ cart.total_price | money }}
-          <span></span>
+        <div class="cart-count header">
+
+          <span class="cart-count-name">My cart</span>
+         
+          <span class="cart-count-cauner-and-price">
+            {{ cart.item_count }} item(s) - {{ cart.total_price | money }}
+          </span>
+
         </div>
         {% comment %}  {% endcomment %}
 
