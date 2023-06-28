@@ -124,16 +124,24 @@
             "proposal_product": "concealer",
             "enable_cart": true
           }
+        },
+        "25d9844e-6036-44e1-940d-254a8b0040a9": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "",
+            "enable_cart": false
+          }
         }
       },
       "block_order": [
         "cffadf2c-f5ae-4bf1-a1ff-a7429b289094",
         "be4553ea-50bc-4bad-970b-c98484472581",
         "f04b7f96-8bf4-4acf-b702-d58b8539cf8e",
-        "e1afa144-0f79-41db-b36e-a797ad6c0b71"
+        "e1afa144-0f79-41db-b36e-a797ad6c0b71",
+        "25d9844e-6036-44e1-940d-254a8b0040a9"
       ],
       "settings": {
-        "show_rating": false,
+        "show_rating": true,
         "slider_items": 3
       }
     },

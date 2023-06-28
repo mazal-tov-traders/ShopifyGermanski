@@ -212,13 +212,13 @@
 .drawer-wrapper-style .cart-item::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -13px;
   left: 50%;
   transform: translateX(-50%);
   width: 690px;
   height: 1px;
   background-color: #aed1ea;
-  margin-top: 10px;
+  
 }
 .cart-item__quantity_button-remove {
   align-items: center;
@@ -313,6 +313,9 @@ cart-drawer-items::-webkit-scrollbar {
   height: 50px;
   border-radius: 3px;
   padding: 0px;
+}
+.drawer-wrapper-style .cart-product-wrapper  tr:first-child {
+ margin-top: 7px;
 }
 /* .cart-drawer {
     position: fixed;

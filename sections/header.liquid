@@ -1100,19 +1100,19 @@
             <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
           </div>
         {%- endif -%}
-        {% comment %}  здесь будет кол и общая цена {% endcomment %}
+       
         <div class="cart-count header">
 
           <span class="cart-count-name">My cart</span>
-         
           <span class="cart-count-cauner-and-price">
             {{ cart.item_count }} item(s) - {{ cart.total_price | money }}
           </span>
-
         </div>
-        {% comment %}  {% endcomment %}
+        
 
       </a>
+      
+       
 
       <div class="cart-body-fixed-wraper">
       <a href="{{ routes.cart_url }}" class="cart-body-fixed" id="cart-icon-bubble">

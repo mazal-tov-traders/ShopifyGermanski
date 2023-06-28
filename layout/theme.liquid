@@ -237,6 +237,7 @@
     }
     </script>
   {% capture boostersnippet %}{% include "booster-apps-common" %}{% endcapture %}{% unless boostersnippet contains "Liquid error" %}{{ boostersnippet }}{% endunless %}
+  {% render 'rapid-search-settings' %}
 </head>
 
   <body class="gradient">
@@ -294,5 +295,8 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-  </body>
+  
+  
+{% include 'globo.filter.action' %}
+	</body>
 </html>

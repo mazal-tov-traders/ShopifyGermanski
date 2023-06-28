@@ -49,22 +49,27 @@
             "share_label": "Share"
           }
         },
-        "cb46e08e-d74c-483e-aebc-b74d187ba88b": {
-          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-star-rating\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+        "75b53660-0548-4098-8171-443c9774f0b0": {
+          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
           "settings": {
+            "stars_fill_color": "#e2da18",
+            "star_size": 21,
+            "text_align": "flex-start",
+            "product": "{{product}}",
+            "stars_text_empty": "No reviews"
           }
         }
       },
       "block_order": [
         "vendor",
         "title",
-        "cb46e08e-d74c-483e-aebc-b74d187ba88b",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "75b53660-0548-4098-8171-443c9774f0b0"
       ],
       "settings": {
         "enable_sticky_info": true,
