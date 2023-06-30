@@ -58,6 +58,11 @@
             "product": "{{product}}",
             "stars_text_empty": "No reviews"
           }
+        },
+        "62fee9c3-1add-47dd-b25e-23625ca27857": {
+          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-star-rating\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -69,7 +74,8 @@
         "buy_buttons",
         "description",
         "share",
-        "75b53660-0548-4098-8171-443c9774f0b0"
+        "75b53660-0548-4098-8171-443c9774f0b0",
+        "62fee9c3-1add-47dd-b25e-23625ca27857"
       ],
       "settings": {
         "enable_sticky_info": true,

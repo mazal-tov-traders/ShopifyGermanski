@@ -90,7 +90,7 @@
                   </div>
 
                   {% comment %} rating {% endcomment %}
-                  {%- if show_rating and product.metafields.reviews.rating.value != blank -%}
+                 {%- if show_rating and product.metafields.reviews.rating.value != blank -%}
                     {% liquid
                       assign rating_decimal = 0
                       assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
@@ -124,7 +124,7 @@
                         {{ 'accessibility.total_reviews' | t -}}
                       </span>
                     </p>
-                  {%- endif -%}
+                   {%- endif -%} 
 
                   <div
                     product-id="{{ product.id }}"

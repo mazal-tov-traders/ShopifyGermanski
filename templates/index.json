@@ -170,6 +170,11 @@
       "settings": {
         "get_img_test": "shopify:\/\/shop_images\/dflogo-w-guarantee.webp"
       }
+    },
+    "0fb045af-d0ac-48e7-95e0-a03be7be38b6": {
+      "type": "presentation-product",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -181,6 +186,7 @@
     "226640c7-4eba-4dba-a5f7-4af3d0cc3224",
     "3cb9b1f7-c818-4412-b206-3359255f37d8",
     "b309dd9a-2fc8-45d6-bce8-f366f0dcc1a1",
-    "ffa895b1-b900-49f9-816a-b03d3c5aff8d"
+    "ffa895b1-b900-49f9-816a-b03d3c5aff8d",
+    "0fb045af-d0ac-48e7-95e0-a03be7be38b6"
   ]
 }
