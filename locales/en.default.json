@@ -117,7 +117,7 @@
       "inventory_out_of_stock": "Out of stock",
       "inventory_out_of_stock_continue_selling": "In stock",
       "sku": "SKU",
-      "on_sale": "Sale!",
+      "on_sale": "Sale",
       "product_variants": "Product variants",
       "media": {
         "gallery_viewer": "Gallery Viewer",
@@ -252,6 +252,13 @@
     }
   },
   "sections": {
+    "announcements": {
+      "previous_announcement": "Previous announcement",
+      "next_announcement": "Next announcement",
+      "carousel": "Carousel",
+      "announcement": "Announcement",
+      "announcement_bar": "Announcement bar"
+    },
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
@@ -261,13 +268,13 @@
       }
     },
     "cart": {
-      "title": "My cart",
+      "title": "Your cart",
       "caption": "Cart items",
       "remove_title": "Remove {{ title }}",
       "subtotal": "Subtotal",
       "new_subtotal": "New subtotal",
       "note": "Order special instructions",
-      "checkout": "Checkout Now",
+      "checkout": "Check out",
       "empty": "Your cart is empty",
       "cart_error": "There was an error while updating your cart. Please try again.",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
@@ -459,13 +466,15 @@
     "form": {
       "checkbox": "I want to send this as a gift",
       "email_label": "Recipient email",
-      "email_label_optional": "Recipient email (optional)",
+      "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
       "email": "Email",
       "name_label": "Recipient name (optional)",
       "name": "Name",
       "message_label": "Message (optional)",
       "message": "Message",
-      "max_characters": "{{ max_chars }} characters max"
+      "max_characters": "{{ max_chars }} characters max",
+      "send_on": "YYYY-MM-DD",
+      "send_on_label": "Send on (optional)"
     }
   }
 }
