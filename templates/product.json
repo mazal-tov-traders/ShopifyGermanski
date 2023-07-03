@@ -63,12 +63,18 @@
           "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-star-rating\/bf2eea72-0400-4db1-8908-44b7418f9a88",
           "settings": {
           }
+        },
+        "judgeme_preview_badge_product_page_a6e09949": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "vendor",
         "title",
         "price",
+        "judgeme_preview_badge_product_page_a6e09949",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -114,10 +120,27 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "judgeme_section_review_widget_7ad8": {
+      "type": "apps",
+      "blocks": {
+        "judgeme_review_widget_ba3bf7cd": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judgeme_review_widget_ba3bf7cd"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
+    "judgeme_section_review_widget_7ad8",
     "alireviews-section-ff02a4b6-3395-4b60-9256-ecf81c89655d",
     "related-products"
   ]

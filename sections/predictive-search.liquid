@@ -1,11 +1,4 @@
-{{ 'component-rating.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'main-search.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-
-<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-
-
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
 {%- if predictive_search.performed -%}
   {% assign first_column_results_size = predictive_search.resources.queries.size
     | plus: predictive_search.resources.collections.size
@@ -148,8 +141,6 @@
                     class="predictive-search__item predictive-search__item--link-with-thumbnail link link--text"
                     tabindex="-1"
                   >
-                    
-
                     {%- if product.featured_media != blank -%}
                       <img
                         class="predictive-search__image"
@@ -158,8 +149,14 @@
                         width="50"
                         height="{{ 50 | divided_by: product.featured_media.preview_image.aspect_ratio }}"
                       >
+                      
                     {%- endif -%}
-                    
+
+{% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+
+
+
+                
                     <div class="predictive-search__item-content{% unless settings.predictive_search_show_vendor or settings.predictive_search_show_price %} predictive-search__item-content--centered{% endunless %}">
                       {%- if settings.predictive_search_show_vendor -%}
                         <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
@@ -168,63 +165,12 @@
                         </div>
                       {%- endif -%}
                       <p class="predictive-search__item-heading h5">{{ product.title }}</p>
+                      
                     </div>
                   </a>
-                  {% comment %} start rating {% endcomment %}
 
-                  
-               
                  
-                    {%- if show_vendor -%}
-                      <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-                      <div class="caption-with-letter-spacing light">{{ product.vendor }}</div>
-                    {%- endif -%}
-        
-                    <span class="caption-large light">{{ block.settings.description | escape }}</span>
-        
-                 
-                      {% liquid
-                        assign rating_decimal = 0
-                        assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
-                        if decimal >= 0.3 and decimal <= 0.7
-                          assign rating_decimal = 0.5
-                        elsif decimal > 0.7
-                          assign rating_decimal = 1
-                        endif
-                      %} 
-                       <div
-                        class="rating"
-                        role="img"
-                        aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
-                      >
-                        <span
-                          aria-hidden="true"
-                          class="rating-star color-icon-{{ settings.accent_icons }}"
-                          style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
-                        ></span>
-                      </div>
-                      <p class="rating-text caption">
-                        <span aria-hidden="true">
-                          {{- product.metafields.reviews.rating.value }} /
-                          {{ product.metafields.reviews.rating.value.scale_max -}}
-                        </span>
-                      </p> 
-                      <p class="rating-count caption">
-                        <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
-                        <span class="visually-hidden">
-                          {{- product.metafields.reviews.rating_count }}
-                          {{ 'accessibility.total_reviews' | t -}}
-                        </span>
-                      </p>
-                   
-        
-                    <div product-id="{{ product.id }}" product-handle="{{ product.handle }}" class="alireviews-review-star-rating"></div>
-                    {% render 'price', product: product, price_class: '' %}
-                
-                
-        
 
-                  {% comment %} end ratinf {% endcomment %}
                 </li>
               {%- endfor -%}
             </ul>
@@ -331,3 +277,36 @@
   </span>
 {%- endif -%}
 
+
+
+{% schema %}
+{
+  "name": "predectiv",
+  "class": "predectiv",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.show_rating.label",
+      "info": "t:sections.featured-collection.settings.show_rating.info"
+    }
+  ],
+"blocks": [
+  {
+    "type": "@app"
+  },
+  {
+    "name": "product",
+    "type": "product",
+    "settings": [
+      {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+     }
+    ]
+  }
+]
+}
+{% endschema %}
